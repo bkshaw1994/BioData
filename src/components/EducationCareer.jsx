@@ -157,50 +157,34 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                 </button>
               </div>
 
-              {/* Education Cards Stack */}
-              <div className="mt-5 space-y-4">
+              {/* Education Card */}
+              <div className="mt-5">
                 
-                {/* 1. Bachelor's Degree Card */}
-                <div className="p-5 rounded-2xl bg-gradient-to-br from-ivory-50 to-white border border-gold-200 shadow-sm relative group">
+                {/* Bachelor's Degree Card */}
+                <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-ivory-50 to-white border border-gold-200 shadow-sm relative group">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] uppercase font-bold text-gold-700 bg-gold-100/80 px-2.5 py-0.5 rounded tracking-wider">
                       Undergraduate Degree (Bachelor's)
                     </span>
                     <button
                       onClick={onOpenEdit}
-                      className="no-print text-[11px] text-gold-600 hover:underline flex items-center gap-0.5"
+                      className="no-print text-[11px] text-gold-600 hover:underline flex items-center gap-1"
                     >
                       <Edit3 className="w-3 h-3" />
                       <span>Edit University</span>
                     </button>
                   </div>
-                  <h4 className="font-serif font-bold text-charcoal-900 text-lg mt-2">
+                  <h4 className="font-serif font-bold text-charcoal-900 text-lg sm:text-xl mt-2.5">
                     {edu?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
                   </h4>
-                  <div className="text-sm font-semibold text-charcoal-700 mt-1">
+                  <div className="text-sm sm:text-base font-semibold text-charcoal-800 mt-1">
                     {edu?.graduation?.institution || "Engineering College / University [Click to customize]"}
                   </div>
-                  <div className="text-xs text-gold-600 font-medium mt-0.5">
-                    {edu?.graduation?.year || "2012 - 2016"}
+                  <div className="text-xs text-gold-600 font-medium mt-1">
+                    Graduation: {edu?.graduation?.year || "2012 - 2016"}
                   </div>
-                  <p className="text-xs text-charcoal-600 mt-2 leading-relaxed">
-                    {edu?.graduation?.details || "First Class in Computer Science & Engineering with strong analytical, algorithms, and software design foundation."}
-                  </p>
-                </div>
-
-                {/* 2. Schooling */}
-                <div className="p-4 rounded-2xl bg-gradient-to-br from-ivory-50 to-white border border-warmborder">
-                  <span className="text-[10px] uppercase font-bold text-charcoal-500 bg-ivory-200 px-2 py-0.5 rounded tracking-wider">
-                    Schooling & Higher Secondary
-                  </span>
-                  <h4 className="font-serif font-bold text-charcoal-900 text-base mt-1.5">
-                    {edu?.schooling?.school || "Senior Secondary High School"}
-                  </h4>
-                  <div className="text-xs text-charcoal-600 mt-0.5 font-medium">
-                    {edu?.schooling?.location || "Jasidih / Deoghar, Jharkhand"}
-                  </div>
-                  <p className="text-xs text-charcoal-500 mt-1.5">
-                    {edu?.schooling?.details || "Science Stream (Mathematics, Physics, Chemistry)."}
+                  <p className="text-xs sm:text-sm text-charcoal-600 mt-2.5 leading-relaxed">
+                    {edu?.graduation?.details || "First Class with Distinction in Computer Science & Engineering with strong analytical, algorithms, and software design foundation."}
                   </p>
                 </div>
 

@@ -158,21 +158,18 @@ export const PrintBioData = ({ data }) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 text-[9pt]">
-                <div className="p-2.5 rounded-lg border border-gray-200">
-                  <span className="font-bold text-gray-900 block text-xs">
-                    {e?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
-                  </span>
-                  <span className="text-gray-700 font-semibold">{e?.graduation?.institution || "Engineering College"}</span>
-                  <div className="text-gray-500 text-[8.5pt]">Computer Science & Engineering • {e?.graduation?.year || "2012 - 2016"}</div>
+              <div className="p-2.5 rounded-lg border border-gray-200 bg-gray-50/40 text-[9pt]">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <span className="font-bold text-gray-900 block text-xs">
+                      {e?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
+                    </span>
+                    <span className="text-gray-700 font-semibold">{e?.graduation?.institution || "Engineering College / University"}</span>
+                  </div>
+                  <span className="text-amber-800 font-semibold text-[8.5pt]">{e?.graduation?.year || "2012 - 2016"}</span>
                 </div>
-
-                <div className="p-2.5 rounded-lg border border-gray-200">
-                  <span className="font-bold text-gray-900 block text-xs">
-                    {e?.schooling?.school || "Senior Secondary High School"}
-                  </span>
-                  <span className="text-gray-700 font-semibold">{e?.schooling?.location || "Jasidih / Deoghar, Jharkhand"}</span>
-                  <div className="text-gray-500 text-[8.5pt]">{e?.schooling?.details || "Science Stream (Mathematics, Physics, Chemistry)"}</div>
+                <div className="text-gray-600 text-[8.5pt] mt-1">
+                  Computer Science & Engineering • First Class with Distinction
                 </div>
               </div>
             </div>

@@ -87,11 +87,6 @@ export const initialBioData = {
       institution: "State Engineering University / College [Click to customize]",
       year: "2012 - 2016",
       details: "First Class with Distinction in Computer Science & Engineering."
-    },
-    schooling: {
-      school: "Senior Secondary High School",
-      location: "Jasidih / Deoghar, Jharkhand",
-      details: "Science Stream (Mathematics, Physics, Chemistry)."
     }
   },
 

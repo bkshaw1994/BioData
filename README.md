@@ -44,8 +44,7 @@ A modern, elegant, and fully responsive Marriage Bio-Data web application built 
    - **Present Position:** Senior / Lead Frontend & Full-Stack Developer at Cognizant (Bengaluru), 10+ Years Industry Experience.
    - **Key Highlights:** React/Next.js Architecture, Micro Frontends, AI-Driven Enterprise UI, technical panelist and mentor.
    - **Education:**
-     - Bachelor of Technology / Engineering (B.Tech / B.E.) card with instant customization.
-     - Senior Secondary Schooling (Jasidih / Deoghar, Jharkhand).
+     - Bachelor of Technology / Engineering (B.Tech / B.E.) in Computer Science & Engineering.
 
 5. **Family Background (Structured Cards):**
    - **Ancestral Roots:** Jasidih, Deoghar District, Jharkhand (Baidyanath Dham region).

@@ -281,29 +281,6 @@ export const EditBioModal = ({ isOpen, onClose, data, onSave, onReset }) => {
                   />
                 </div>
               </div>
-
-              {/* Schooling */}
-              <div className="p-4 bg-white rounded-2xl border border-warmborder shadow-sm space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-charcoal-700 block">Schooling & Higher Secondary</span>
-                <div>
-                  <label className="text-xs text-charcoal-600 font-medium block mb-1">School Name</label>
-                  <input
-                    type="text"
-                    value={formData.education?.schooling?.school || "Senior Secondary High School"}
-                    onChange={(e) => handleEducationChange('schooling', 'school', e.target.value)}
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-warmborder focus:outline-none focus:border-gold-500 bg-ivory-50"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs text-charcoal-600 font-medium block mb-1">Location / Details</label>
-                  <input
-                    type="text"
-                    value={formData.education?.schooling?.location || "Jasidih / Deoghar, Jharkhand"}
-                    onChange={(e) => handleEducationChange('schooling', 'location', e.target.value)}
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-warmborder focus:outline-none focus:border-gold-500 bg-ivory-50"
-                  />
-                </div>
-              </div>
             </div>
           )}
 
