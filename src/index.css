@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #1F2937;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom delicate pattern background */
+.bg-mandala-pattern {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(rgba(180, 83, 9, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Subtle decorative border flourish */
+.gold-gradient-border {
+  border-image: linear-gradient(to right, rgba(217, 119, 6, 0.1), rgba(217, 119, 6, 0.6), rgba(217, 119, 6, 0.1)) 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D97706;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B45309;
+}
+
+/* Print Stylesheet - Crisp, elegant single/two-page PDF layout */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm 12mm 15mm;
+  }
+
+  /* Force background colors and borders in print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide interactive elements, navigation, floating buttons, edit drawers */
+  .no-print,
+  nav,
+  button,
+  .print-hidden,
+  #whatsapp-floating,
+  .interactive-gallery-controls {
+    display: none !important;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Prevent awkward page breaks inside cards */
+  .page-break-avoid,
+  .card-print,
+  article,
+  section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Ensure print header appears on printed page */
+  .print-only-header {
+    display: block !important;
+  }
+
+  /* Make shadows flat borders for sharp print output */
+  .shadow-card,
+  .shadow-soft,
+  .shadow-lg,
+  .shadow-md {
+    box-shadow: none !important;
+    border: 1px solid #D1D5DB !important;
+  }
+
+  /* Adjust spacing for compact PDF layout */
+  .print-compact {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 8px !important;
+  }
+}
+
