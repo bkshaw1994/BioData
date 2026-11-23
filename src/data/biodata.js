@@ -113,17 +113,10 @@ export const initialBioData = {
         icon: "User"
       },
       {
-        relation: "Elder Sister",
-        name: "Elder Sister",
-        status: "Married & Well-Settled",
-        description: "Happily married and well-settled with family.",
-        icon: "Users"
-      },
-      {
-        relation: "Sister",
+        relation: "Younger Sister",
         name: "Bishakha Shaw",
-        status: "Educated & Working Professional",
-        description: "Loving sister, well-educated, cultured, and supportive.",
+        status: "Married & Well-Settled",
+        description: "Married, cultured, and family-oriented younger sister, well-settled with family.",
         icon: "Smile"
       }
     ]

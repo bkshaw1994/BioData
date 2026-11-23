@@ -56,7 +56,7 @@ export const FamilySection = ({ data }) => {
         </div>
 
         {/* Distinct Respectful Profile Cards for Each Family Member */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* 1. Father Card */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
@@ -148,63 +148,33 @@ export const FamilySection = ({ data }) => {
             </div>
           </div>
 
-          {/* 4. Elder Sister (Married) Card */}
+          {/* 4. Younger Sister - Bishakha Shaw (Married) Card */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
             <div>
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md border border-purple-200">
-                  Elder Sister
+                  Younger Sister
                 </span>
-                <Users className="w-5 h-5 text-purple-400" />
+                <Smile className="w-5 h-5 text-purple-500" />
               </div>
 
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                Elder Sister
+                {members[3]?.name || "Bishakha Shaw"}
               </h3>
 
-                <div className="text-xs font-semibold text-purple-700 mt-1 inline-flex items-center gap-1 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
-                  Married & Well-Settled
-                </div>
-
-                  <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                    Happily married and well-settled with family, maintaining close family bonds and celebrating all family occasions together.
-                  </p>
-              </div>
-
-              <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-                <span>Status: Married</span>
-                <span className="text-purple-700 font-medium">Elder Sister</span>
-              </div>
-          </div>
-
-          {/* 5. Sister - Bishakha Shaw Card */}
-          <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
-            <CornerOrnament position="top-right" />
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md border border-teal-200">
-                  Sister
-                </span>
-                <Smile className="w-5 h-5 text-teal-500" />
-              </div>
-
-              <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                Bishakha Shaw
-              </h3>
-
-              <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                Educated & Working Professional
+              <div className="text-xs font-semibold text-purple-700 mt-1 inline-flex items-center gap-1 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
+                {members[3]?.status || "Married & Well-Settled"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                Educated, respectful, and family-oriented sister with high aspirations and supportive demeanor.
+                {members[3]?.description || "Married, cultured, and family-oriented younger sister, well-settled with family."}
               </p>
             </div>
 
             <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-              <span>Hometown: Jasidih, Jharkhand</span>
-              <span className="text-teal-700 font-medium">Sister</span>
+              <span>Status: Married</span>
+              <span className="text-purple-700 font-medium">Younger Sister</span>
             </div>
           </div>
 

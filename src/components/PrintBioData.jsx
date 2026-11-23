@@ -225,7 +225,7 @@ export const PrintBioData = ({ data }) => {
               <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
                 <div>
                   <span className="font-bold text-gray-900">Mother: </span>
-                  <span className="font-semibold text-gray-800">{f.members?.[1]?.name || "[Mother's Name]"}</span>
+                  <span className="font-semibold text-gray-800">{f.members?.[1]?.name || "Smt. Shaw"}</span>
                   <div className="text-xs text-gray-600">{f.members?.[1]?.status || "Homemaker"}</div>
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Maternal</span>
@@ -241,21 +241,12 @@ export const PrintBioData = ({ data }) => {
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Brother</span>
               </div>
 
-              {/* Sisters */}
+              {/* Younger Sister */}
               <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
                 <div>
-                  <span className="font-bold text-gray-900">Elder Sister: </span>
-                  <span className="font-semibold text-gray-800">Married & Well-Settled</span>
-                  <div className="text-xs text-gray-600">Married and well-settled with family</div>
-                </div>
-                <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Sister</span>
-              </div>
-
-              <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
-                <div>
-                  <span className="font-bold text-gray-900">Sister: </span>
-                  <span className="font-semibold text-gray-800">Bishakha Shaw</span>
-                  <div className="text-xs text-gray-600">Educated & Working Professional</div>
+                  <span className="font-bold text-gray-900">Younger Sister: </span>
+                  <span className="font-semibold text-gray-800">{f.members?.[3]?.name || "Bishakha Shaw"}</span>
+                  <div className="text-xs text-gray-600">{f.members?.[3]?.status || "Married & Well-Settled"}</div>
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Sister</span>
               </div>

@@ -17,58 +17,9 @@ import { Share2 } from 'lucide-react';
 export default function App() {
   const [bioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v10') || localStorage.getItem('biodata_bishal_v9') || localStorage.getItem('biodata_bishal_v8') || localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        // Ensure real photos are used if previously saved photos were placeholders
-        if (parsed?.photos?.[0]?.url?.includes('unsplash')) {
-          parsed.photos = initialBioData.photos;
-        }
-        // Remove Postgraduate certificate and Schooling if present in saved storage
-        if (parsed?.education?.postGraduation) {
-          delete parsed.education.postGraduation;
-        }
-        if (parsed?.education?.schooling) {
-          delete parsed.education.schooling;
-        }
-        // Ensure degree reflects Electronics & Communication Engineering
-        if (parsed?.education?.graduation) {
-          parsed.education.graduation.degree = "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering";
-          parsed.education.graduation.details = "First Class with Distinction in Electronics and Communication Engineering (ECE).";
-        }
-        // Clean brother-in-law details from elder sister
-        if (parsed?.family?.members?.[3]) {
-          delete parsed.family.members[3].spouse;
-          parsed.family.members[3].status = "Married & Well-Settled";
-          parsed.family.members[3].description = "Happily married and well-settled with family.";
-        }
-        // Remove smoking and drinking fields
-        if (parsed?.personal?.smoking) {
-          delete parsed.personal.smoking;
-        }
-        if (parsed?.personal?.drinking) {
-          delete parsed.personal.drinking;
-        }
-        // Update title to Senior Associate if old title present
-        if (!parsed.personal) parsed.personal = {};
-        parsed.personal.title = "Senior Associate";
-        parsed.personal.tagline = "Senior Associate at Cognizant | Bengaluru, Karnataka";
-        if (!parsed.career) parsed.career = {};
-        parsed.career.currentRole = "Senior Associate";
-        if (parsed.career.workHistory?.[0]) {
-          parsed.career.workHistory[0].role = "Senior Associate";
-        }
-        // Remove Ambassador from highlights
-        if (parsed?.career?.highlights) {
-          parsed.career.highlights = parsed.career.highlights.filter(h => !h.includes("Ambassador"));
-        }
-        // Update Manglik status
-        if (!parsed.horoscope) parsed.horoscope = {};
-        parsed.horoscope.manglik = "Manglik";
-        return parsed;
-      }
+      ['biodata_bishal_v1', 'biodata_bishal_v2', 'biodata_bishal_v3', 'biodata_bishal_v4', 'biodata_bishal_v5', 'biodata_bishal_v6', 'biodata_bishal_v7', 'biodata_bishal_v8', 'biodata_bishal_v9', 'biodata_bishal_v10'].forEach(k => localStorage.removeItem(k));
     } catch (e) {
-      console.error("Failed to load saved biodata", e);
+      // Ignore
     }
     return initialBioData;
   });
