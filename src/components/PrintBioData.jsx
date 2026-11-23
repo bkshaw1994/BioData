@@ -41,9 +41,6 @@ export const PrintBioData = ({ data }) => {
             <div className="font-serif text-2xl font-bold text-gray-900 tracking-tight mt-1">
               MARRIAGE BIO-DATA
             </div>
-            <div className="text-[9pt] text-gray-600 font-medium">
-              Candidate Profile • Confidential & Matrimonial Purposes Only
-            </div>
           </div>
 
           {/* Candidate Summary Box with Photo */}
@@ -125,8 +122,8 @@ export const PrintBioData = ({ data }) => {
               </div>
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
-                <span className="text-gray-600">Rashi (Moon Sign):</span>
-                <span className="font-semibold text-gray-900">{h.rashi || "Kanya (Virgo)"}</span>
+                <span className="text-gray-600">Rashi:</span>
+                <span className="font-semibold text-gray-900">{h.rashi || "Cancer"}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Nakshatra:</span>
@@ -143,7 +140,7 @@ export const PrintBioData = ({ data }) => {
               </div>
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
-                <span className="text-gray-600">Hobbies & Interests:</span>
+                <span className="text-gray-600">Hobbies:</span>
                 <span className="font-semibold text-gray-900">{Array.isArray(p.hobbies) ? p.hobbies.join(', ') : "Cooking, Road trips, Cinema, Tech"}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 py-0.5">
@@ -294,9 +291,9 @@ export const PrintBioData = ({ data }) => {
             <div className="grid grid-cols-2 gap-4 text-[9.5pt]">
               <div className="p-2.5 rounded-lg border border-gray-200">
                 <span className="font-bold text-gray-900 block mb-1">Direct Family Contacts:</span>
-                <div><strong>Primary Contact:</strong> {contact.primaryContactPerson || "Bishwanath Shaw / Bishal Kumar Shaw"}</div>
-                <div><strong>Primary Phone:</strong> {contact.phone || "+91 98765 43210"}</div>
-                <div><strong>Alternate Contact:</strong> {contact.alternatePhone || "+91 91234 56789"}</div>
+                <div><strong>Primary Contact:</strong> {contact.primaryContactPerson || "Bishwanath Shaw"}</div>
+                <div><strong>Primary Phone:</strong> {contact.phone || "+91 9031938060"}</div>
+                <div><strong>Alternate Contact:</strong> {contact.alternatePhone || "+91 9031938060"}</div>
               </div>
 
               <div className="p-2.5 rounded-lg border border-gray-200">

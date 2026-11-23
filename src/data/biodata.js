@@ -29,7 +29,7 @@ export const initialBioData = {
 
   // Horoscope & Astrological Details
   horoscope: {
-    rashi: "Kanya (Virgo)",
+    rashi: "Cancer",
     nakshatra: "Pushya / Punarvasu",
     charan: "4th Charan",
     manglik: "Manglik",

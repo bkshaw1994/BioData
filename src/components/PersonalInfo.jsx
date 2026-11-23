@@ -232,10 +232,6 @@ export const PersonalInfo = ({ data }) => {
 
             {/* Kundli parameters table */}
             <div className="mt-5 space-y-3 font-sans">
-              <div className="flex items-center justify-between py-2 border-b border-gold-200/50">
-                <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Rashi (Moon Sign)</span>
-                <span className="text-sm font-serif font-bold text-charcoal-900">{h.rashi || "Kanya (Virgo)"}</span>
-              </div>
 
               <div className="flex items-center justify-between py-2 border-b border-gold-200/50">
                 <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Nakshatra</span>
@@ -258,8 +254,8 @@ export const PersonalInfo = ({ data }) => {
               </div>
 
               <div className="flex items-center justify-between py-2 border-b border-gold-200/50">
-                <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Sun Sign</span>
-                <span className="text-sm font-semibold text-charcoal-900">{h.sunSign || "Cancer"}</span>
+                <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Rashi</span>
+                <span className="text-sm font-semibold text-charcoal-900">{h.rashi || "Cancer"}</span>
               </div>
 
               <div className="flex items-center justify-between py-2">

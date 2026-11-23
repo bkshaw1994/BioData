@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { initialBioData } from './data/biodata';
-import { Navbar } from './components/Navbar';
+// import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PersonalInfo } from './components/PersonalInfo';
 import { EducationCareer } from './components/EducationCareer';
