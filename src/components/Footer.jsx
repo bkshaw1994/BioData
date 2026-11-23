@@ -45,7 +45,7 @@ export const Footer = ({ onPrint, onOpenShare, data }) => {
               {data?.personal?.fullName || "Bishal Kumar Shaw"}
             </div>
             <div className="text-xs text-white/50 font-sans">
-              Senior / Lead Full-Stack & Frontend Engineer at Cognizant, Bengaluru
+              Senior Associate at Cognizant, Bengaluru
             </div>
           </div>
 

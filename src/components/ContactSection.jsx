@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Share2, 
-  Copy, 
-  Check, 
-  Printer, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Share2,
+  Copy,
+  Check,
+  Printer,
   MessageCircle,
   Sparkles,
   ShieldCheck,
@@ -36,7 +36,7 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
   return (
     <section id="contact" className="py-12 sm:py-16 bg-[#FAF7F2] border-t border-warmborder/70 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 uppercase tracking-widest bg-gold-100/60 px-3 py-1 rounded-full border border-gold-200">
@@ -53,11 +53,11 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Main Contact Card (7 cols) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-warmborder shadow-card relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
-            
+
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-warmborder">
                 <div className="flex items-center gap-2.5">
@@ -82,7 +82,7 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
 
               {/* Contact list with interactive copy/call buttons */}
               <div className="mt-6 space-y-4 font-sans">
-                
+
                 {/* Phone 1 */}
                 <div className="p-3.5 rounded-2xl bg-ivory-50 border border-warmborder flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
@@ -164,10 +164,10 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
             </div>
 
             {/* Timing & Respectful Note */}
-            <div className="mt-6 pt-4 border-t border-warmborder/80 flex items-center gap-2 text-xs text-charcoal-600">
+            {/* <div className="mt-6 pt-4 border-t border-warmborder/80 flex items-center gap-2 text-xs text-charcoal-600">
               <Clock className="w-4 h-4 text-gold-500 shrink-0" />
               <span>Preferred time for calls: <strong>{contact.bestTimeToCall || "10:00 AM – 8:00 PM IST"}</strong></span>
-            </div>
+            </div> */}
 
           </div>
 
@@ -191,7 +191,7 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
               </div>
 
               <div className="mt-6 space-y-5">
-                
+
                 {/* Current Residence */}
                 <div className="p-4 rounded-2xl bg-white border border-gold-200/80">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 px-2 py-0.5 rounded border border-gold-200">

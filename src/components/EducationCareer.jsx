@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  Briefcase, 
-  GraduationCap, 
-  Award, 
-  Code2, 
-  Layers, 
-  Cpu, 
-  Cloud, 
-  Edit3, 
-  Sparkles, 
+import {
+  Briefcase,
+  GraduationCap,
+  Award,
+  Code2,
+  Layers,
+  Cpu,
+  Cloud,
+  Edit3,
+  Sparkles,
   ExternalLink,
   CheckCircle2,
   Calendar,
@@ -23,7 +23,7 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
   return (
     <section id="career" className="py-12 sm:py-16 bg-ivory-100 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 uppercase tracking-widest bg-gold-100/60 px-3 py-1 rounded-full border border-gold-200">
@@ -40,21 +40,21 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Career & Technical Highlights (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            
+
             {/* Current Position Main Banner */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-warmborder shadow-card relative overflow-hidden">
               <CornerOrnament position="top-right" />
-              
+
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-warmborder">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-gold-600 bg-gold-50 px-2.5 py-1 rounded-md border border-gold-200 inline-block mb-1">
                     Present Position
                   </span>
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-charcoal-900">
-                    {career.currentRole || "Senior / Lead Frontend & Full-Stack Developer"}
+                    {career.currentRole || "Senior Associate"}
                   </h3>
                   <div className="flex items-center gap-2 mt-1 text-sm font-semibold text-charcoal-700">
                     <span className="text-gold-600 font-bold">{career.currentCompany || "Cognizant"}</span>
@@ -128,7 +128,7 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
 
           {/* Education Timeline & Certification Cards (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
-            
+
             <div className="bg-white rounded-3xl p-6 sm:p-7 border border-warmborder shadow-card relative">
               <CornerOrnament position="top-left" />
 
@@ -159,7 +159,7 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
 
               {/* Education Card */}
               <div className="mt-5">
-                
+
                 {/* Bachelor's Degree Card */}
                 <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-ivory-50 to-white border border-gold-200 shadow-sm relative group">
                   <div className="flex items-center justify-between">
@@ -184,7 +184,7 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                     Graduation: {edu?.graduation?.year || "2012 - 2016"}
                   </div>
                   <p className="text-xs sm:text-sm text-charcoal-600 mt-2.5 leading-relaxed">
-                    {edu?.graduation?.details || "First Class with Distinction in Computer Science & Engineering with strong analytical, algorithms, and software design foundation."}
+                    {edu?.graduation?.details || "First Class with Distinction in Electronics and Communication Engineering with strong analytical, algorithms, and software design foundation."}
                   </p>
                 </div>
 

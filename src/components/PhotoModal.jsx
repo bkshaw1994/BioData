@@ -43,7 +43,7 @@ export const PhotoModal = ({ photo, onClose }) => {
 
         {/* Footer info */}
         <div className="p-3 bg-black/50 text-center text-xs text-white/60">
-          Marriage Bio-Data • Bishal Kumar Shaw • Senior/Lead Frontend Engineer at Cognizant
+          Marriage Bio-Data • Bishal Kumar Shaw • Senior Associate at Cognizant
         </div>
       </div>
     </div>

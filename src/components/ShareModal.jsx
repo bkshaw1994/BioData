@@ -9,7 +9,7 @@ export const ShareModal = ({ isOpen, onClose, data }) => {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://bishalkumarshaw-biodata.web.app';
   
   const candidateName = data?.personal?.fullName || "Bishal Kumar Shaw";
-  const role = data?.personal?.title || "Senior / Lead Full-Stack & Frontend Engineer at Cognizant";
+  const role = data?.personal?.title || "Senior Associate at Cognizant";
   const location = data?.personal?.location || "Bengaluru";
 
   const prefilledMessage = `Namaste / Hello,\n\nSharing the Marriage Bio-Data of ${candidateName} (${role}, ${location}):\n\n${currentUrl}\n\nPlease feel free to review the profile, Kundli particulars, and family background. Looking forward to connecting respectfully.`;

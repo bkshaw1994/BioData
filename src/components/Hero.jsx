@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { 
-  Briefcase, 
-  MapPin, 
-  Calendar, 
-  Ruler, 
-  Home, 
-  FileDown, 
-  ArrowDown, 
-  Share2, 
-  Award, 
-  CheckCircle2, 
+import {
+  Briefcase,
+  MapPin,
+  Calendar,
+  Ruler,
+  Home,
+  FileDown,
+  ArrowDown,
+  Share2,
+  Award,
+  CheckCircle2,
   Maximize2,
   Sparkles,
   Heart
@@ -42,19 +42,14 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           {/* Left Column: Bio Details & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            
+
             {/* Auspicious Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-50 border border-gold-300 text-gold-700 text-xs sm:text-sm font-medium shadow-sm">
               <LotusIcon className="w-4 h-4 text-gold-600" />
               <span>Auspicious Marriage Bio-Data</span>
-              <span className="text-gold-400">•</span>
-              <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                Verified Profile
-              </span>
             </div>
 
             {/* Name & Title */}
@@ -62,10 +57,10 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal-900 tracking-tight leading-tight">
                 {data?.personal?.fullName || "Bishal Kumar Shaw"}
               </h1>
-              
+
               <div className="mt-2.5 flex items-center gap-2 flex-wrap">
                 <span className="text-base sm:text-lg font-serif text-gold-600 font-semibold italic">
-                  Senior / Lead Full-Stack & Frontend Engineer
+                  {data?.personal?.title || "Senior Associate"}
                 </span>
                 <span className="hidden sm:inline text-charcoal-400">|</span>
                 <span className="inline-flex items-center gap-1 text-sm font-sans font-medium text-charcoal-600 bg-ivory-200/80 px-2.5 py-0.5 rounded-md border border-warmborder">
@@ -132,7 +127,7 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
 
             {/* About / Summary Note */}
             <p className="text-sm sm:text-base text-charcoal-600 leading-relaxed font-sans bg-white/50 p-4 rounded-xl border border-warmborder/60">
-              {data?.personal?.aboutMe || 
+              {data?.personal?.aboutMe ||
                 "A balanced, warm-hearted, and grounded individual who believes in mutual respect, family values, and continuous growth. Passionate about software architecture, clean code, and emerging AI technologies, while equally enjoying peaceful weekends, good movies, road trips, and quality time with loved ones."}
             </p>
 
@@ -182,10 +177,10 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
           {/* Right Column: Featured Portrait Card */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-sm sm:max-w-md group">
-              
+
               {/* Outer Decorative Gold Frame */}
               <div className="relative p-3 sm:p-4 rounded-3xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF6ED] to-[#F3ECE0] border-2 border-gold-300 shadow-card">
-                
+
                 {/* Traditional Corner Accents */}
                 <CornerOrnament position="top-left" />
                 <CornerOrnament position="top-right" />
@@ -199,7 +194,7 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
                     alt={currentPhoto?.caption || "Bishal Kumar Shaw"}
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
-                  
+
                   {/* Subtle Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 via-transparent to-black/15 pointer-events-none"></div>
 
@@ -224,7 +219,7 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
                       {data?.personal?.fullName || "Bishal Kumar Shaw"}
                     </div>
                     <div className="text-xs text-gold-200 font-sans flex items-center gap-1.5 drop-shadow-sm">
-                      <span>{currentPhoto?.caption || "Senior / Lead Frontend Engineer"}</span>
+                      <span>{currentPhoto?.caption || "Senior Associate"}</span>
                       <span>•</span>
                       <span>{data?.personal?.location || "Bengaluru"}</span>
                     </div>
@@ -238,11 +233,10 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
                       <button
                         key={p.id || idx}
                         onClick={() => setActivePhotoIdx(idx)}
-                        className={`relative w-12 h-14 rounded-lg overflow-hidden border-2 transition-all ${
-                          activePhotoIdx === idx
-                            ? 'border-gold-500 scale-105 ring-2 ring-gold-300 shadow-sm'
-                            : 'border-warmborder opacity-70 hover:opacity-100 hover:border-gold-300'
-                        }`}
+                        className={`relative w-12 h-14 rounded-lg overflow-hidden border-2 transition-all ${activePhotoIdx === idx
+                          ? 'border-gold-500 scale-105 ring-2 ring-gold-300 shadow-sm'
+                          : 'border-warmborder opacity-70 hover:opacity-100 hover:border-gold-300'
+                          }`}
                         title={p.caption}
                       >
                         <img

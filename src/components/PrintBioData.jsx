@@ -13,10 +13,10 @@ export const PrintBioData = ({ data }) => {
 
   return (
     <div className="hidden print:block print:w-full print:bg-white print:text-black font-sans text-[10pt] leading-tight">
-      
+
       {/* PAGE 1: Personal, Astrological, Career & Education */}
       <div className="min-h-screen p-6 border-2 border-amber-800/40 relative flex flex-col justify-between" style={{ pageBreakAfter: 'always' }}>
-        
+
         <div>
           {/* Top Auspicious Header */}
           <div className="text-center pb-2 border-b-2 border-amber-700/60 mb-4">
@@ -38,7 +38,7 @@ export const PrintBioData = ({ data }) => {
                 {p.fullName || "Bishal Kumar Shaw"}
               </h1>
               <div className="text-amber-800 font-semibold text-xs font-serif">
-                {c.currentRole || "Senior / Lead Frontend & Full-Stack Developer"} at {c.currentCompany || "Cognizant"}
+                {c.currentRole || "Senior Associate"} at {c.currentCompany || "Cognizant"}
               </div>
               <div className="text-[9.5pt] text-gray-700 pt-1 flex flex-wrap gap-x-3 gap-y-0.5">
                 <span><strong>Age:</strong> {p.age || "32 Years"}</span>
@@ -147,7 +147,7 @@ export const PrintBioData = ({ data }) => {
             <div className="space-y-2 text-[9.5pt]">
               <div className="p-2.5 rounded-lg border border-gray-200 bg-gray-50/50">
                 <div className="flex justify-between font-bold text-gray-900">
-                  <span>{c.currentRole || "Senior / Lead Full-Stack & Frontend Engineer"}</span>
+                  <span>{c.currentRole || "Senior Associate"}</span>
                   <span className="text-amber-800">{c.totalExperience || "10+ Years Experience"}</span>
                 </div>
                 <div className="text-xs font-semibold text-gray-700">
@@ -169,7 +169,7 @@ export const PrintBioData = ({ data }) => {
                   <span className="text-amber-800 font-semibold text-[8.5pt]">{e?.graduation?.year || "2012 - 2016"}</span>
                 </div>
                 <div className="text-gray-600 text-[8.5pt] mt-1">
-                  Computer Science & Engineering • First Class with Distinction
+                  Electronics and Communication Engineering • First Class with Distinction
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export const PrintBioData = ({ data }) => {
 
       {/* PAGE 2: Family Background, Partner Preferences & Contact Details */}
       <div className="min-h-screen p-6 border-2 border-amber-800/40 relative flex flex-col justify-between">
-        
+
         <div>
           {/* Top Header Page 2 */}
           <div className="text-center pb-2 border-b-2 border-amber-700/60 mb-4">
