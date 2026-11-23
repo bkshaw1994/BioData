@@ -92,13 +92,13 @@ export const initialBioData = {
       {
         relation: "Father",
         name: "Bishwanath Shaw",
-        status: "Businessman / Retired Professional",
+        status: "Businessman",
         description: "Head of the family, guiding with wisdom, strong ethical values, and deep care for all family members.",
         icon: "UserCheck"
       },
       {
         relation: "Mother",
-        name: "Smt. Shaw",
+        name: "Laxmi Devi",
         status: "Homemaker",
         description: "The emotional pillar of our family, devoted, loving, and preserving our cultural traditions and culinary heritage.",
         icon: "Heart"

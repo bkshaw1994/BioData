@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileDown, Menu, X, FileText, Heart, Phone, Sparkles } from 'lucide-react';
+import { FileDown, Menu, X, ChevronRight } from 'lucide-react';
 import { LotusIcon } from './DecorativeIcons';
 
 export const Navbar = ({ onDownload, isDownloading, data }) => {
@@ -126,15 +126,18 @@ export const Navbar = ({ onDownload, isDownloading, data }) => {
           </div>
         </div>
 
-        {/* Mobile Left-Side Translucent Dropdown Menu with Top-to-Bottom Slide Transition */}
+        {/* Mobile Right-Side Translucent Dropdown Menu with Popover Arrow & Top-to-Bottom Slide Transition */}
         <div
-          className={`sm:hidden absolute top-full left-3 mt-1.5 w-60 max-w-[85vw] rounded-2xl bg-white/80 backdrop-blur-md border border-gold-200/90 shadow-xl p-3 transform transition-all duration-300 ease-in-out origin-top z-50 ${
+          className={`sm:hidden absolute top-full right-3 mt-2 w-60 max-w-[85vw] rounded-2xl bg-white/85 backdrop-blur-md border border-gold-200/90 shadow-2xl p-2.5 transform transition-all duration-300 ease-in-out origin-top-right z-50 ${
             mobileMenuOpen
-              ? 'opacity-100 translate-y-0 pointer-events-auto scale-y-100'
-              : 'opacity-0 -translate-y-4 pointer-events-none scale-y-95'
+              ? 'opacity-100 translate-y-0 pointer-events-auto scale-100'
+              : 'opacity-0 -translate-y-3 pointer-events-none scale-95'
           }`}
         >
-          <nav className="flex flex-col space-y-1">
+          {/* Top Indicator Arrow pointing directly to menubar button */}
+          <div className="absolute -top-[7px] right-4 w-3.5 h-3.5 bg-white/85 border-t border-l border-gold-200/90 rotate-45 backdrop-blur-md" />
+
+          <nav className="flex flex-col space-y-1 relative z-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -143,7 +146,7 @@ export const Navbar = ({ onDownload, isDownloading, data }) => {
                 className="px-3.5 py-2.5 rounded-xl text-sm font-semibold text-charcoal-800 hover:text-gold-700 hover:bg-gold-100/60 transition-all flex items-center justify-between group"
               >
                 <span>{link.name}</span>
-                <span className="text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity text-xs">→</span>
+                <ChevronRight className="w-4 h-4 text-gold-500 transform group-hover:translate-x-1 transition-transform" />
               </a>
             ))}
           </nav>
