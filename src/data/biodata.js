@@ -1,5 +1,4 @@
 // Default Bio-Data Information for Bishal Kumar Shaw
-// Can be customized live via the built-in Customize Modal and saved to localStorage
 
 export const initialBioData = {
   // Candidate Profile
@@ -18,7 +17,7 @@ export const initialBioData = {
     weight: "78 kg",
     complexion: "Wheatish / Fair",
     maritalStatus: "Never Married",
-    bloodGroup: "B+ (Positive)",
+    bloodGroup: "O+",
     religion: "Hindu",
     casteCommunity: "Shaw / Vaishya",
     gotra: "Kashyap",
@@ -81,7 +80,7 @@ export const initialBioData = {
   education: {
     graduation: {
       degree: "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering",
-      institution: "State Engineering University / College [Click to customize]",
+      institution: "Engineering College / University",
       year: "2012 - 2016",
       details: "First Class with Distinction in Electronics and Communication Engineering (ECE)."
     }
@@ -95,13 +94,13 @@ export const initialBioData = {
       {
         relation: "Father",
         name: "Bishwanath Shaw",
-        status: "Businessman / Retired Professional [Editable]",
+        status: "Businessman / Retired Professional",
         description: "Head of the family, guiding with wisdom, strong ethical values, and deep care for all family members.",
         icon: "UserCheck"
       },
       {
         relation: "Mother",
-        name: "[Mother's Name - Click to customize]",
+        name: "Smt. Shaw",
         status: "Homemaker",
         description: "The emotional pillar of our family, devoted, loving, and preserving our cultural traditions and culinary heritage.",
         icon: "Heart"
@@ -109,7 +108,7 @@ export const initialBioData = {
       {
         relation: "Younger Brother",
         name: "Badal Kumar Shaw",
-        status: "Software Professional / Working Professional [Editable]",
+        status: "Software Professional / Working Professional",
         description: "Supportive, ambitious, and well-settled brother pursuing his professional career.",
         icon: "User"
       },
@@ -123,7 +122,7 @@ export const initialBioData = {
       {
         relation: "Sister",
         name: "Bishakha Shaw",
-        status: "Educated & Working Professional [Editable]",
+        status: "Educated & Working Professional",
         description: "Loving sister, well-educated, cultured, and supportive.",
         icon: "Smile"
       }
@@ -145,9 +144,9 @@ export const initialBioData = {
   // Contact & Communication
   contact: {
     primaryContactPerson: "Bishwanath Shaw (Father) / Bishal Kumar Shaw",
-    phone: "+91 98765 43210 [Editable]",
-    alternatePhone: "+91 91234 56789 [Editable]",
-    email: "bishal.shaw@example.com [Editable]",
+    phone: "+91 98765 43210",
+    alternatePhone: "+91 91234 56789",
+    email: "bishal.shaw@example.com",
     residenceAddress: "Bengaluru, Karnataka, India",
     nativeAddress: "Jasidih, Deoghar District, Jharkhand - 814142",
     bestTimeToCall: "10:00 AM – 8:00 PM IST",

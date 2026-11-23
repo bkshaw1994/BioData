@@ -7,7 +7,6 @@ import {
   Layers,
   Cpu,
   Cloud,
-  Edit3,
   Sparkles,
   ExternalLink,
   CheckCircle2,
@@ -16,7 +15,7 @@ import {
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament } from './DecorativeIcons';
 
-export const EducationCareer = ({ data, onOpenEdit }) => {
+export const EducationCareer = ({ data }) => {
   const career = data?.career || {};
   const edu = data?.education || {};
 
@@ -146,14 +145,6 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                   </div>
                 </div>
 
-                <button
-                  onClick={onOpenEdit}
-                  className="no-print text-xs font-semibold text-gold-600 hover:text-gold-700 flex items-center gap-1 bg-gold-50 px-2.5 py-1 rounded-lg border border-gold-200"
-                  title="Customize College & Degree details"
-                >
-                  <Edit3 className="w-3.5 h-3.5" />
-                  <span>Edit Details</span>
-                </button>
               </div>
 
               {/* Education Card */}
@@ -165,19 +156,12 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                     <span className="text-[10px] uppercase font-bold text-gold-700 bg-gold-100/80 px-2.5 py-0.5 rounded tracking-wider">
                       Undergraduate Degree (Bachelor's)
                     </span>
-                    <button
-                      onClick={onOpenEdit}
-                      className="no-print text-[11px] text-gold-600 hover:underline flex items-center gap-1"
-                    >
-                      <Edit3 className="w-3 h-3" />
-                      <span>Edit University</span>
-                    </button>
                   </div>
                   <h4 className="font-serif font-bold text-charcoal-900 text-lg sm:text-xl mt-2.5">
                     {edu?.graduation?.degree || "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering"}
                   </h4>
                   <div className="text-sm sm:text-base font-semibold text-charcoal-800 mt-1">
-                    {edu?.graduation?.institution || "Engineering College / University [Click to customize]"}
+                    {edu?.graduation?.institution || "Engineering College / University"}
                   </div>
                   <div className="text-xs text-gold-600 font-medium mt-1">
                     Graduation: {edu?.graduation?.year || "2012 - 2016"}

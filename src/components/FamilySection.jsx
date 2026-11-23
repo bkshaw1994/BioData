@@ -6,14 +6,13 @@ import {
   User,
   Home,
   Sparkles,
-  Edit3,
   MapPin,
   Smile,
   Shield
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const FamilySection = ({ data, onOpenEdit }) => {
+export const FamilySection = ({ data }) => {
   const family = data?.family || {};
   const members = family?.members || [];
 
@@ -54,14 +53,6 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               </p>
             </div>
           </div>
-
-          <button
-            onClick={onOpenEdit}
-            className="no-print shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-gold-800 bg-white hover:bg-gold-50 border border-gold-300 shadow-sm transition-all"
-          >
-            <Edit3 className="w-3.5 h-3.5 text-gold-600" />
-            <span>Customize Family Details</span>
-          </button>
         </div>
 
         {/* Distinct Respectful Profile Cards for Each Family Member */}
@@ -83,7 +74,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               </h3>
 
               <div className="text-xs font-semibold text-gold-600 mt-0.5">
-                {members[0]?.status || "Businessman / Retired Professional [Editable]"}
+                {members[0]?.status || "Businessman / Retired Professional"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
@@ -108,15 +99,12 @@ export const FamilySection = ({ data, onOpenEdit }) => {
                 <Heart className="w-5 h-5 text-rose-400" />
               </div>
 
-              <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3 flex items-center justify-between">
-                <span>{members[1]?.name || "[Mother's Name]"}</span>
-                <button onClick={onOpenEdit} className="no-print text-[11px] font-sans text-gold-600 hover:underline">
-                  {members[1]?.name ? "Edit Name" : "Add Name"}
-                </button>
+              <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
+                {members[1]?.name?.includes('[') ? "Smt. Shaw" : (members[1]?.name || "Smt. Shaw")}
               </h3>
 
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                {members[1]?.status || "Homemaker / Loving Caretaker [Editable]"}
+                {members[1]?.status || "Homemaker"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
@@ -146,7 +134,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               </h3>
 
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                {members[2]?.status || "Working Professional / Software Engineer [Editable]"}
+                {members[2]?.status || "Software Professional / Working"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
@@ -174,20 +162,20 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
                 Elder Sister
               </h3>
-              
-              <div className="text-xs font-semibold text-purple-700 mt-1 inline-flex items-center gap-1 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
-                Married & Well-Settled
+
+                <div className="text-xs font-semibold text-purple-700 mt-1 inline-flex items-center gap-1 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
+                  Married & Well-Settled
+                </div>
+
+                  <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
+                    Happily married and well-settled with family, maintaining close family bonds and celebrating all family occasions together.
+                  </p>
               </div>
 
-              <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                Happily married and well-settled with family, maintaining close family bonds and celebrating all family occasions together.
-              </p>
-            </div>
-
-            <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-              <span>Status: Married</span>
-              <span className="text-purple-700 font-medium">Elder Sister</span>
-            </div>
+              <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
+                <span>Status: Married</span>
+                <span className="text-purple-700 font-medium">Elder Sister</span>
+              </div>
           </div>
 
           {/* 5. Sister - Bishakha Shaw Card */}

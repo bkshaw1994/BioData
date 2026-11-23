@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
+export const ContactSection = ({ data, onOpenShare, onPrint }) => {
   const contact = data?.contact || {};
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -94,7 +94,7 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
                         Primary Phone / WhatsApp
                       </span>
                       <span className="text-sm font-bold text-charcoal-900 font-mono">
-                        {contact.phone || "+91 98765 43210 [Click Customize to Edit]"}
+                        {contact.phone || "+91 98765 43210"}
                       </span>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
                         Alternate Family Contact
                       </span>
                       <span className="text-sm font-bold text-charcoal-900 font-mono">
-                        {contact.alternatePhone || "+91 91234 56789 [Click Customize to Edit]"}
+                        {contact.alternatePhone || "+91 91234 56789"}
                       </span>
                     </div>
                   </div>
@@ -144,7 +144,7 @@ export const ContactSection = ({ data, onOpenShare, onPrint, onOpenEdit }) => {
                         Email Address
                       </span>
                       <span className="text-sm font-semibold text-charcoal-900">
-                        {contact.email || "bishal.shaw@example.com [Editable]"}
+                        {contact.email || "bishal.shaw@example.com"}
                       </span>
                     </div>
                   </div>

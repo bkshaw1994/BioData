@@ -1,31 +1,31 @@
 import React from 'react';
-import { 
-  User, 
-  Calendar, 
-  Clock, 
-  MapPin, 
-  Ruler, 
-  Compass, 
-  Utensils, 
-  Heart, 
-  Sparkles, 
-  Languages, 
-  ShieldCheck, 
-  Activity, 
-  Smile, 
+import {
+  User,
+  Calendar,
+  Clock,
+  MapPin,
+  Ruler,
+  Compass,
+  Utensils,
+  Heart,
+  Sparkles,
+  Languages,
+  ShieldCheck,
+  Activity,
+  Smile,
   Flame,
   CheckCircle2
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const PersonalInfo = ({ data, onOpenEdit }) => {
+export const PersonalInfo = ({ data }) => {
   const p = data?.personal || {};
   const h = data?.horoscope || {};
 
   return (
     <section id="personal" className="py-12 sm:py-16 bg-[#FAF7F2] border-t border-warmborder/70 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 uppercase tracking-widest bg-gold-100/60 px-3 py-1 rounded-full border border-gold-200">
@@ -43,11 +43,11 @@ export const PersonalInfo = ({ data, onOpenEdit }) => {
 
         {/* 2-Column Grid Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Column 1: Personal Attributes (7 cols) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-warmborder shadow-card relative">
             <CornerOrnament position="top-right" />
-            
+
             <div className="flex items-center justify-between pb-4 border-b border-warmborder/80">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl bg-gold-50 flex items-center justify-center text-gold-600 border border-gold-200">
@@ -66,7 +66,7 @@ export const PersonalInfo = ({ data, onOpenEdit }) => {
 
             {/* Structured 2-column key-value grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mt-6">
-              
+
               <div className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-ivory-50 transition-colors">
                 <User className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
                 <div>
@@ -177,9 +177,6 @@ export const PersonalInfo = ({ data, onOpenEdit }) => {
                     </p>
                   </div>
                 </div>
-                <div className="text-xs text-charcoal-600 bg-white px-3 py-1.5 rounded-lg border border-warmborder">
-                  🏃 {p.fitness || "Regular walking & home-cooked meals"}
-                </div>
               </div>
 
               {/* Languages Known Badges */}
@@ -201,7 +198,7 @@ export const PersonalInfo = ({ data, onOpenEdit }) => {
                   <Smile className="w-3.5 h-3.5 text-gold-500" />
                   Interests:
                 </span>
-                {(p.hobbies || ["Road trips", "Cinema", "Gaming"]).map((hobby, idx) => (
+                {(p.hobbies || ["Road trips", "Cinema", "Gaming, Cooking"]).map((hobby, idx) => (
                   <span key={idx} className="text-xs bg-white text-charcoal-700 border border-warmborder px-2.5 py-0.5 rounded-md">
                     {hobby}
                   </span>

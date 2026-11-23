@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) => {
+export const Hero = ({ data, onPrint, onOpenShare, onSelectPhoto }) => {
   const [activePhotoIdx, setActivePhotoIdx] = useState(0);
   const photos = data?.photos || [];
   const currentPhoto = photos[activePhotoIdx] || photos[0];
