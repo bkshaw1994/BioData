@@ -23,8 +23,6 @@ export const initialBioData = {
     casteCommunity: "Shaw / Vaishya",
     gotra: "Kashyap",
     diet: "Vegetarian & Non-Vegetarian",
-    smoking: "No (Non-smoker)",
-    drinking: "No (Teetotaler / Occasional social)",
     fitness: "Fitness-conscious (Regular walking, badminton & home-cooked meals)",
     hobbies: ["Road trips & Long drives", "Cinema & Storytelling", "Tech & Gaming", "Podcasts & Reading"],
     languages: ["English (Fluent)", "Hindi (Native)", "Bengali (Conversational)"],

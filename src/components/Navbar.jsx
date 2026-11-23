@@ -45,21 +45,16 @@ export const Navbar = ({ onOpenEdit, onOpenShare, onPrint, data }) => {
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-xs md:text-sm font-serif text-gold-700 tracking-wider font-semibold">
           <LotusIcon className="w-3.5 h-3.5 text-gold-600 inline" />
           <span>|| ॐ श्री गणेशाय नमः ||</span>
-          <span className="hidden sm:inline text-gold-400">•</span>
-          <span className="hidden sm:inline text-charcoal-600 font-sans font-normal text-xs tracking-normal">
-            Marriage Bio-Data of Bishal Kumar Shaw
-          </span>
           <LotusIcon className="w-3.5 h-3.5 text-gold-600 inline" />
         </div>
       </div>
 
       {/* Main Sticky Navbar */}
       <header
-        className={`no-print sticky top-0 z-40 transition-all duration-300 ${
-          scrolled
+        className={`no-print sticky top-0 z-40 transition-all duration-300 ${scrolled
             ? 'bg-ivory-100/95 backdrop-blur-md shadow-soft border-b border-warmborder/80 py-2.5'
             : 'bg-ivory-100/80 backdrop-blur-sm border-b border-warmborder/40 py-3.5'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">

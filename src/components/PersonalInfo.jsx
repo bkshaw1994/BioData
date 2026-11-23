@@ -171,14 +171,10 @@ export const PersonalInfo = ({ data, onOpenEdit }) => {
                 <div className="flex items-start gap-3">
                   <Utensils className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs font-bold text-charcoal-700 uppercase tracking-wide block">Diet & Habits</span>
-                    <p className="text-sm text-charcoal-700 font-medium">
+                    <span className="text-xs font-bold text-charcoal-700 uppercase tracking-wide block">Dietary Preference</span>
+                    <p className="text-sm text-charcoal-800 font-medium">
                       {p.diet || "Vegetarian & Non-Vegetarian"}
                     </p>
-                    <span className="text-xs text-emerald-700 font-semibold inline-flex items-center gap-1 mt-0.5">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      {p.smoking || "Non-smoker"} • Teetotaler
-                    </span>
                   </div>
                 </div>
                 <div className="text-xs text-charcoal-600 bg-white px-3 py-1.5 rounded-lg border border-warmborder">

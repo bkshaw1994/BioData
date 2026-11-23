@@ -18,7 +18,7 @@ import { Share2, Printer, Sparkles, Edit3 } from 'lucide-react';
 export default function App() {
   const [bioData, setBioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
+      const saved = localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         // Ensure real photos are used if previously saved photos were placeholders
@@ -31,6 +31,13 @@ export default function App() {
         }
         if (parsed?.education?.schooling) {
           delete parsed.education.schooling;
+        }
+        // Remove smoking and drinking fields
+        if (parsed?.personal?.smoking) {
+          delete parsed.personal.smoking;
+        }
+        if (parsed?.personal?.drinking) {
+          delete parsed.personal.drinking;
         }
         // Update Manglik status
         if (!parsed.horoscope) parsed.horoscope = {};
@@ -48,16 +55,22 @@ export default function App() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const handleSaveData = (updatedData) => {
-    // Ensure no postGraduation or schooling is persisted
+    // Ensure no postGraduation or schooling or smoking is persisted
     if (updatedData?.education?.postGraduation) {
       delete updatedData.education.postGraduation;
     }
     if (updatedData?.education?.schooling) {
       delete updatedData.education.schooling;
     }
+    if (updatedData?.personal?.smoking) {
+      delete updatedData.personal.smoking;
+    }
+    if (updatedData?.personal?.drinking) {
+      delete updatedData.personal.drinking;
+    }
     setBioData(updatedData);
     try {
-      localStorage.setItem('biodata_bishal_v5', JSON.stringify(updatedData));
+      localStorage.setItem('biodata_bishal_v6', JSON.stringify(updatedData));
     } catch (e) {
       console.error("Failed to persist biodata", e);
     }
@@ -66,6 +79,7 @@ export default function App() {
   const handleResetData = () => {
     setBioData(initialBioData);
     try {
+      localStorage.removeItem('biodata_bishal_v6');
       localStorage.removeItem('biodata_bishal_v5');
       localStorage.removeItem('biodata_bishal_v4');
       localStorage.removeItem('biodata_bishal_v3');

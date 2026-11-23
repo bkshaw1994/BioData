@@ -128,8 +128,8 @@ export const PrintBioData = ({ data }) => {
               </div>
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
-                <span className="text-gray-600">Diet & Lifestyle:</span>
-                <span className="font-semibold text-gray-900">{p.diet} • Non-smoker</span>
+                <span className="text-gray-600">Dietary Preference:</span>
+                <span className="font-semibold text-gray-900">{p.diet}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Languages Known:</span>
