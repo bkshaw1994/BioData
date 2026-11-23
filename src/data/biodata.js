@@ -55,7 +55,6 @@ export const initialBioData = {
       "Performance Optimization & Cloud Deployment"
     ],
     highlights: [
-      "Cognizant Brand Ambassador (#CognizantAmbassadorBLR)",
       "Technical Panelist & Senior Interviewer for Frontend & Full-Stack Engineering",
       "Leads distributed engineering teams building high-scale enterprise applications",
       "Active mentor for junior developers and engineering excellence evangelist"

@@ -32,7 +32,7 @@ A modern, elegant, and fully responsive Marriage Bio-Data web application built 
    - **Candidate:** Bishal Kumar Shaw
    - **Current Role:** Senior Associate at **Cognizant**, Bengaluru
    - **Badges:** 32 Years • 6'0" (183 cm) • Bengaluru (Current) • Jasidih, Jharkhand (Hometown)
-   - **Specialty Badges:** Cognizant Brand Ambassador (`#CognizantAmbassadorBLR`), Manglik.
+   - **Specialty Badges:** 10+ Years Experience, Manglik.
    - **Featured Portrait:** Elegant gold double-border card with traditional corner flourishes, multi-photo thumbnail selector, and lightbox trigger.
 
 3. **Personal & Horoscope Details (2-Column Grid Card):**

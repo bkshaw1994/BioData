@@ -18,7 +18,7 @@ import { Share2, Printer, Sparkles, Edit3 } from 'lucide-react';
 export default function App() {
   const [bioData, setBioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
+      const saved = localStorage.getItem('biodata_bishal_v8') || localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         // Ensure real photos are used if previously saved photos were placeholders
@@ -48,6 +48,10 @@ export default function App() {
         if (parsed.career.workHistory?.[0]) {
           parsed.career.workHistory[0].role = "Senior Associate";
         }
+        // Remove Ambassador from highlights
+        if (parsed?.career?.highlights) {
+          parsed.career.highlights = parsed.career.highlights.filter(h => !h.includes("Ambassador"));
+        }
         // Update Manglik status
         if (!parsed.horoscope) parsed.horoscope = {};
         parsed.horoscope.manglik = "Manglik";
@@ -64,7 +68,7 @@ export default function App() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const handleSaveData = (updatedData) => {
-    // Ensure no postGraduation or schooling or smoking is persisted
+    // Ensure clean fields
     if (updatedData?.education?.postGraduation) {
       delete updatedData.education.postGraduation;
     }
@@ -77,9 +81,12 @@ export default function App() {
     if (updatedData?.personal?.drinking) {
       delete updatedData.personal.drinking;
     }
+    if (updatedData?.career?.highlights) {
+      updatedData.career.highlights = updatedData.career.highlights.filter(h => !h.includes("Ambassador"));
+    }
     setBioData(updatedData);
     try {
-      localStorage.setItem('biodata_bishal_v7', JSON.stringify(updatedData));
+      localStorage.setItem('biodata_bishal_v8', JSON.stringify(updatedData));
     } catch (e) {
       console.error("Failed to persist biodata", e);
     }
@@ -88,6 +95,7 @@ export default function App() {
   const handleResetData = () => {
     setBioData(initialBioData);
     try {
+      localStorage.removeItem('biodata_bishal_v8');
       localStorage.removeItem('biodata_bishal_v7');
       localStorage.removeItem('biodata_bishal_v6');
       localStorage.removeItem('biodata_bishal_v5');

@@ -93,14 +93,13 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                 </div>
               </div>
 
-              {/* Key Highlights & Brand Ambassador */}
+              {/* Key Highlights */}
               <div className="mt-6 pt-5 border-t border-warmborder/80">
                 <span className="text-xs font-bold text-charcoal-500 uppercase tracking-wider block mb-3">
                   Key Professional Highlights
                 </span>
                 <div className="space-y-2.5">
                   {(career.highlights || [
-                    "Cognizant Brand Ambassador (#CognizantAmbassadorBLR)",
                     "Technical Panelist & Senior Interviewer for Frontend & Full-Stack Engineering",
                     "Leads distributed engineering teams building high-scale enterprise applications",
                     "Active mentor for junior developers and engineering excellence evangelist"

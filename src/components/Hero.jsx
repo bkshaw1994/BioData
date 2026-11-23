@@ -135,7 +135,7 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
             <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-charcoal-700">
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gold-100/70 border border-gold-200 text-gold-800">
                 <Award className="w-3.5 h-3.5 text-gold-600" />
-                Cognizant Ambassador (#CognizantAmbassadorBLR)
+                10+ Years in Software Engineering
               </span>
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800">
                 <Sparkles className="w-3.5 h-3.5 text-amber-600" />

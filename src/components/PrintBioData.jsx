@@ -154,7 +154,7 @@ export const PrintBioData = ({ data }) => {
                   {c.currentCompany || "Cognizant Technology Solutions"} • {c.currentLocation || "Bengaluru, Karnataka"}
                 </div>
                 <div className="text-[9pt] text-gray-600 mt-1">
-                  <strong>Specialization:</strong> React, Next.js, Micro Frontends, AI Enterprise UI, Cloud Deployment. Recognized as Cognizant Brand Ambassador (#CognizantAmbassadorBLR) and Senior Interviewer.
+                  <strong>Specialization:</strong> React, Next.js, Micro Frontends, AI Enterprise UI, Cloud Deployment. Senior Technical Interviewer & Engineering Mentor.
                 </div>
               </div>
 
