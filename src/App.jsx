@@ -11,6 +11,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { PhotoModal } from './components/PhotoModal';
 import { PrintBioData } from './components/PrintBioData';
+import { downloadBioDataPDF } from './utils/downloadPdf';
 
 export default function App() {
   const [bioData] = useState(() => {
@@ -23,20 +24,29 @@ export default function App() {
   });
 
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [isDownloading, setIsDownloading] = useState(false);
 
-  const handlePrint = () => {
-    window.print();
+  const handleDownload = async () => {
+    setIsDownloading(true);
+    try {
+      await downloadBioDataPDF();
+    } catch (e) {
+      console.error("Direct download failed", e);
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-ivory-100 text-charcoal-800 antialiased selection:bg-gold-200 selection:text-gold-900 bg-mandala-pattern">
 
-      {/* SCREEN VIEW (Hidden during @media print) */}
-      <div className="print:hidden">
+      {/* SCREEN VIEW */}
+      <div>
         {/* Navigation Bar */}
         <Navbar
           data={bioData}
-          onPrint={handlePrint}
+          onDownload={handleDownload}
+          isDownloading={isDownloading}
         />
 
         {/* Main Content Sections */}
@@ -44,7 +54,8 @@ export default function App() {
           {/* Section A: Hero Section */}
           <Hero
             data={bioData}
-            onPrint={handlePrint}
+            onDownload={handleDownload}
+            isDownloading={isDownloading}
             onSelectPhoto={(photo) => setSelectedPhoto(photo)}
           />
 
@@ -77,14 +88,16 @@ export default function App() {
           {/* Family Contact & Communication */}
           <ContactSection
             data={bioData}
-            onPrint={handlePrint}
+            onDownload={handleDownload}
+            isDownloading={isDownloading}
           />
         </main>
 
         {/* Footer */}
         <Footer
           data={bioData}
-          onPrint={handlePrint}
+          onDownload={handleDownload}
+          isDownloading={isDownloading}
         />
 
         <PhotoModal
@@ -93,7 +106,7 @@ export default function App() {
         />
       </div>
 
-      {/* DEDICATED PRINT / PDF OUTPUT (Only visible when printing or saving as PDF) */}
+      {/* DEDICATED PDF EXPORT DOM CONTAINER (Rendered off-screen for instant PDF direct download) */}
       <PrintBioData data={bioData} />
 
     </div>

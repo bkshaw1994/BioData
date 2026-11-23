@@ -48,6 +48,14 @@
 
 /* Print Stylesheet - Crisp, elegant single/two-page PDF layout */
 @media print {
+  #pdf-download-wrapper {
+    position: static !important;
+    left: auto !important;
+    width: 100% !important;
+    z-index: auto !important;
+    display: block !important;
+  }
+
   @page {
     size: A4 portrait;
     margin: 12mm 15mm 12mm 15mm;

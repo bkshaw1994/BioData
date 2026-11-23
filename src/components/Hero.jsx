@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const Hero = ({ data, onPrint, onSelectPhoto }) => {
+export const Hero = ({ data, onDownload, isDownloading, onSelectPhoto }) => {
   const [activePhotoIdx, setActivePhotoIdx] = useState(0);
   const photos = data?.photos || [];
   const currentPhoto = photos[activePhotoIdx] || photos[0];
@@ -153,12 +153,13 @@ export const Hero = ({ data, onPrint, onSelectPhoto }) => {
               </button>
 
               <button
-                onClick={onPrint}
-                className="flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-charcoal-800 bg-white hover:bg-ivory-200 border border-gold-300 shadow-soft hover:shadow transition-all transform hover:-translate-y-0.5"
-                title="Saves a clean, professionally formatted PDF"
+                onClick={onDownload}
+                disabled={isDownloading}
+                className="flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-charcoal-800 bg-white hover:bg-ivory-200 border border-gold-300 shadow-soft hover:shadow transition-all transform hover:-translate-y-0.5 disabled:opacity-60"
+                title="Directly downloads the PDF Bio-Data"
               >
                 <FileDown className="w-4 h-4 text-gold-600" />
-                <span>Save / Print PDF</span>
+                <span>{isDownloading ? "Downloading..." : "Download Bio-Data"}</span>
               </button>
             </div>
 

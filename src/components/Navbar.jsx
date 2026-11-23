@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Printer, Menu, X, FileText, Heart, Phone, Sparkles } from 'lucide-react';
+import { FileDown, Menu, X, FileText, Heart, Phone, Sparkles } from 'lucide-react';
 import { LotusIcon } from './DecorativeIcons';
 
-export const Navbar = ({ onPrint, data }) => {
+export const Navbar = ({ onDownload, isDownloading, data }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -93,25 +93,27 @@ export const Navbar = ({ onPrint, data }) => {
 
             {/* Desktop Action Buttons */}
             <div className="hidden sm:flex items-center gap-2.5">
-              {/* Download / Print Bio-Data Button */}
+              {/* Download Bio-Data Button */}
               <button
-                onClick={onPrint}
-                className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-terracotta-600 shadow-sm hover:shadow transition-all hover:-translate-y-0.5 active:translate-y-0"
-                title="Download or Print PDF Bio-Data"
+                onClick={onDownload}
+                disabled={isDownloading}
+                className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-terracotta-600 shadow-sm hover:shadow transition-all hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60"
+                title="Download Bio-Data PDF directly"
               >
-                <Printer className="w-3.5 h-3.5" />
-                <span>Download / Print PDF</span>
+                <FileDown className="w-3.5 h-3.5" />
+                <span>{isDownloading ? "Downloading..." : "Download Bio-Data"}</span>
               </button>
             </div>
 
             {/* Mobile Menu & Quick Actions */}
             <div className="flex sm:hidden items-center gap-2">
               <button
-                onClick={onPrint}
-                className="p-2 rounded-full text-white bg-gold-500 hover:bg-gold-600 shadow-sm"
-                title="Download PDF"
+                onClick={onDownload}
+                disabled={isDownloading}
+                className="p-2 rounded-full text-white bg-gold-500 hover:bg-gold-600 shadow-sm disabled:opacity-60"
+                title="Download Bio-Data"
               >
-                <Printer className="w-4 h-4" />
+                <FileDown className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -131,12 +133,13 @@ export const Navbar = ({ onPrint, data }) => {
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onPrint();
+                  onDownload();
                 }}
-                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-gold-500 shadow-sm"
+                disabled={isDownloading}
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-gold-500 shadow-sm disabled:opacity-60"
               >
-                <Printer className="w-3.5 h-3.5" />
-                <span>Download / Print PDF</span>
+                <FileDown className="w-3.5 h-3.5" />
+                <span>{isDownloading ? "Downloading..." : "Download Bio-Data"}</span>
               </button>
             </div>
 

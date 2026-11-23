@@ -12,10 +12,25 @@ export const PrintBioData = ({ data }) => {
   const primaryPhoto = data?.photos?.[0] || {};
 
   return (
-    <div className="hidden print:block print:w-full print:bg-white print:text-black font-sans text-[10pt] leading-tight">
+    <div
+      id="pdf-download-wrapper"
+      className="print:w-full print:bg-white print:text-black font-sans text-[10pt] leading-tight"
+      style={{
+        position: 'fixed',
+        left: '-99999px',
+        top: 0,
+        width: '794px',
+        zIndex: -100,
+        pointerEvents: 'none'
+      }}
+    >
 
       {/* PAGE 1: Personal, Astrological, Career & Education */}
-      <div className="min-h-screen p-6 border-2 border-amber-800/40 relative flex flex-col justify-between" style={{ pageBreakAfter: 'always' }}>
+      <div
+        id="pdf-page-1"
+        className="w-[794px] min-h-[1120px] p-8 bg-white text-black border-2 border-amber-800/40 relative flex flex-col justify-between"
+        style={{ pageBreakAfter: 'always' }}
+      >
 
         <div>
           {/* Top Auspicious Header */}
@@ -186,7 +201,10 @@ export const PrintBioData = ({ data }) => {
       </div>
 
       {/* PAGE 2: Family Background, Partner Preferences & Contact Details */}
-      <div className="min-h-screen p-6 border-2 border-amber-800/40 relative flex flex-col justify-between">
+      <div
+        id="pdf-page-2"
+        className="w-[794px] min-h-[1120px] p-8 bg-white text-black border-2 border-amber-800/40 relative flex flex-col justify-between"
+      >
 
         <div>
           {/* Top Header Page 2 */}

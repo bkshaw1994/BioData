@@ -1,8 +1,8 @@
 import React from 'react';
-import { Heart, Printer, Sparkles, ArrowUp } from 'lucide-react';
+import { Heart, FileDown, Sparkles, ArrowUp } from 'lucide-react';
 import { GoldDivider, LotusIcon } from './DecorativeIcons';
 
-export const Footer = ({ onPrint, data }) => {
+export const Footer = ({ onDownload, isDownloading, data }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -51,11 +51,13 @@ export const Footer = ({ onPrint, data }) => {
 
           <div className="flex items-center gap-3">
             <button
-              onClick={onPrint}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-white bg-gold-600 hover:bg-gold-500 transition-colors shadow-sm"
+              onClick={onDownload}
+              disabled={isDownloading}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-white bg-gold-600 hover:bg-gold-500 transition-colors shadow-sm disabled:opacity-60"
+              title="Directly downloads the PDF Bio-Data"
             >
-              <Printer className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
+              <FileDown className="w-3.5 h-3.5" />
+              <span>{isDownloading ? "Downloading..." : "Download Bio-Data"}</span>
             </button>
 
             <button
