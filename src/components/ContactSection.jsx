@@ -4,7 +4,6 @@ import {
   Mail,
   MapPin,
   Clock,
-  Share2,
   Copy,
   Check,
   Printer,
@@ -15,7 +14,7 @@ import {
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const ContactSection = ({ data, onOpenShare, onPrint }) => {
+export const ContactSection = ({ data, onPrint }) => {
   const contact = data?.contact || {};
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -227,22 +226,14 @@ export const ContactSection = ({ data, onOpenShare, onPrint }) => {
               </div>
             </div>
 
-            {/* Quick Action Buttons in Card */}
-            <div className="no-print mt-6 pt-4 border-t border-gold-200/70 flex items-center gap-3">
-              <button
-                onClick={onOpenShare}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all"
-              >
-                <Share2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>WhatsApp Share</span>
-              </button>
-
+            {/* Quick Action Button in Card */}
+            <div className="no-print mt-6 pt-4 border-t border-gold-200/70">
               <button
                 onClick={onPrint}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-gold-500 hover:bg-gold-600 shadow-sm transition-all"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-gold-500 hover:bg-gold-600 shadow-sm transition-all"
               >
                 <Printer className="w-3.5 h-3.5" />
-                <span>Print PDF</span>
+                <span>Download / Print PDF Bio-Data</span>
               </button>
             </div>
 

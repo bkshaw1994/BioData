@@ -1,8 +1,8 @@
 import React from 'react';
-import { Heart, Printer, Share2, Sparkles, ArrowUp } from 'lucide-react';
+import { Heart, Printer, Sparkles, ArrowUp } from 'lucide-react';
 import { GoldDivider, LotusIcon } from './DecorativeIcons';
 
-export const Footer = ({ onPrint, onOpenShare, data }) => {
+export const Footer = ({ onPrint, data }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -56,14 +56,6 @@ export const Footer = ({ onPrint, onOpenShare, data }) => {
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Download PDF</span>
-            </button>
-
-            <button
-              onClick={onOpenShare}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-white bg-emerald-700 hover:bg-emerald-600 transition-colors shadow-sm"
-            >
-              <Share2 className="w-3.5 h-3.5" />
-              <span>Share via WhatsApp</span>
             </button>
 
             <button

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Printer, Share2, Menu, X, FileText, Heart, Phone, Sparkles } from 'lucide-react';
+import { Printer, Menu, X, FileText, Heart, Phone, Sparkles } from 'lucide-react';
 import { LotusIcon } from './DecorativeIcons';
 
-export const Navbar = ({ onOpenShare, onPrint, data }) => {
+export const Navbar = ({ onPrint, data }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -93,16 +93,6 @@ export const Navbar = ({ onOpenShare, onPrint, data }) => {
 
             {/* Desktop Action Buttons */}
             <div className="hidden sm:flex items-center gap-2.5">
-              {/* Share via WhatsApp */}
-              <button
-                onClick={onOpenShare}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all hover:shadow-sm"
-                title="Share Bio-Data via WhatsApp"
-              >
-                <Share2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Share via WhatsApp</span>
-              </button>
-
               {/* Download / Print Bio-Data Button */}
               <button
                 onClick={onPrint}
@@ -124,13 +114,6 @@ export const Navbar = ({ onOpenShare, onPrint, data }) => {
                 <Printer className="w-4 h-4" />
               </button>
               <button
-                onClick={onOpenShare}
-                className="p-2 rounded-full text-emerald-700 bg-emerald-100 hover:bg-emerald-200"
-                title="Share"
-              >
-                <Share2 className="w-4 h-4" />
-              </button>
-              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-charcoal-700 hover:text-gold-600 hover:bg-ivory-200"
                 aria-label="Toggle Navigation Menu"
@@ -144,26 +127,16 @@ export const Navbar = ({ onOpenShare, onPrint, data }) => {
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div className="sm:hidden bg-ivory-100/98 border-b border-warmborder px-4 pt-3 pb-5 space-y-2 shadow-lg animate-fadeIn">
-            <div className="grid grid-cols-2 gap-2 pb-3 border-b border-warmborder/60">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenShare();
-                }}
-                className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200"
-              >
-                <Share2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>WhatsApp Share</span>
-              </button>
+            <div className="pb-3 border-b border-warmborder/60">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onPrint();
                 }}
-                className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-gold-500 shadow-sm"
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-gold-500 shadow-sm"
               >
                 <Printer className="w-3.5 h-3.5" />
-                <span>Print PDF</span>
+                <span>Download / Print PDF</span>
               </button>
             </div>
 

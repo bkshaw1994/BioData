@@ -7,7 +7,6 @@ import {
   Home,
   FileDown,
   ArrowDown,
-  Share2,
   Award,
   CheckCircle2,
   Maximize2,
@@ -16,7 +15,7 @@ import {
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
-export const Hero = ({ data, onPrint, onOpenShare, onSelectPhoto }) => {
+export const Hero = ({ data, onPrint, onSelectPhoto }) => {
   const [activePhotoIdx, setActivePhotoIdx] = useState(0);
   const photos = data?.photos || [];
   const currentPhoto = photos[activePhotoIdx] || photos[0];
@@ -160,15 +159,6 @@ export const Hero = ({ data, onPrint, onOpenShare, onSelectPhoto }) => {
               >
                 <FileDown className="w-4 h-4 text-gold-600" />
                 <span>Save / Print PDF</span>
-              </button>
-
-              <button
-                onClick={onOpenShare}
-                className="flex items-center gap-2 px-4 py-3 rounded-full text-sm font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 shadow-soft transition-all"
-                title="Share Bio-Data directly to WhatsApp"
-              >
-                <Share2 className="w-4 h-4 text-emerald-600" />
-                <span className="hidden sm:inline">Share on WhatsApp</span>
               </button>
             </div>
 

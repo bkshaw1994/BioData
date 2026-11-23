@@ -9,10 +9,8 @@ import { FamilySection } from './components/FamilySection';
 import { PhotoGallery } from './components/PhotoGallery';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { ShareModal } from './components/ShareModal';
 import { PhotoModal } from './components/PhotoModal';
 import { PrintBioData } from './components/PrintBioData';
-import { Share2 } from 'lucide-react';
 
 export default function App() {
   const [bioData] = useState(() => {
@@ -24,7 +22,6 @@ export default function App() {
     return initialBioData;
   });
 
-  const [shareModalOpen, setShareModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const handlePrint = () => {
@@ -39,7 +36,6 @@ export default function App() {
         {/* Navigation Bar */}
         <Navbar
           data={bioData}
-          onOpenShare={() => setShareModalOpen(true)}
           onPrint={handlePrint}
         />
 
@@ -49,7 +45,6 @@ export default function App() {
           <Hero
             data={bioData}
             onPrint={handlePrint}
-            onOpenShare={() => setShareModalOpen(true)}
             onSelectPhoto={(photo) => setSelectedPhoto(photo)}
           />
 
@@ -82,7 +77,6 @@ export default function App() {
           {/* Family Contact & Communication */}
           <ContactSection
             data={bioData}
-            onOpenShare={() => setShareModalOpen(true)}
             onPrint={handlePrint}
           />
         </main>
@@ -91,26 +85,6 @@ export default function App() {
         <Footer
           data={bioData}
           onPrint={handlePrint}
-          onOpenShare={() => setShareModalOpen(true)}
-        />
-
-        {/* Floating Quick Action Widget for Mobile & Desktop */}
-        <div id="whatsapp-floating" className="no-print fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2.5">
-          <button
-            onClick={() => setShareModalOpen(true)}
-            className="group flex items-center gap-2 p-3 sm:px-4 sm:py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
-            title="Share Bio-Data via WhatsApp"
-          >
-            <Share2 className="w-5 h-5" />
-            <span className="hidden sm:inline text-xs font-semibold">Share on WhatsApp</span>
-          </button>
-        </div>
-
-        {/* Interactive Modals */}
-        <ShareModal
-          isOpen={shareModalOpen}
-          onClose={() => setShareModalOpen(false)}
-          data={bioData}
         />
 
         <PhotoModal
