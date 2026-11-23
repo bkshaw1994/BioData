@@ -158,8 +158,8 @@ export const PersonalInfo = ({ data }) => {
               <div className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-ivory-50 transition-colors">
                 <Activity className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
                 <div>
-                  <span className="text-xs text-charcoal-500 uppercase tracking-wider font-semibold block">Complexion & Weight</span>
-                  <span className="text-sm font-semibold text-charcoal-800">{p.complexion || "Wheatish"} • {p.weight || "78 kg"}</span>
+                  <span className="text-xs text-charcoal-500 uppercase tracking-wider font-semibold block">Complexion</span>
+                  <span className="text-sm font-semibold text-charcoal-800">{p.complexion || "Wheatish"}</span>
                 </div>
               </div>
 

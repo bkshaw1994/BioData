@@ -92,8 +92,8 @@ export const PrintBioData = ({ data }) => {
               </div>
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
-                <span className="text-gray-600">Height / Weight:</span>
-                <span className="font-semibold text-gray-900">{p.height} / {p.weight || "78 kg"}</span>
+                <span className="text-gray-600">Height:</span>
+                <span className="font-semibold text-gray-900">{p.height}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Complexion:</span>
