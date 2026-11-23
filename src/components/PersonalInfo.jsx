@@ -142,7 +142,7 @@ export const PersonalInfo = ({ data }) => {
               <div className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-ivory-50 transition-colors">
                 <Compass className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
                 <div>
-                  <span className="text-xs text-charcoal-500 uppercase tracking-wider font-semibold block">Religion & Caste</span>
+                  <span className="text-xs text-charcoal-500 uppercase tracking-wider font-semibold block">Religion & Community</span>
                   <span className="text-sm font-semibold text-charcoal-800">{p.religion} • {p.casteCommunity}</span>
                 </div>
               </div>

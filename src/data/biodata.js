@@ -19,7 +19,7 @@ export const initialBioData = {
     maritalStatus: "Never Married",
     bloodGroup: "O+",
     religion: "Hindu",
-    casteCommunity: "Shaw / Vaishya",
+    casteCommunity: "Shaw",
     gotra: "Kashyap",
     diet: "Vegetarian & Non-Vegetarian",
     fitness: "Fitness-conscious (Regular walking, badminton & home-cooked meals)",

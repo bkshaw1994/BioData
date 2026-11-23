@@ -196,7 +196,7 @@ export const FamilySection = ({ data }) => {
             </div>
 
             <div className="mt-5 pt-3 border-t border-gold-300/60 flex items-center justify-between text-xs text-gold-800 font-serif font-semibold">
-              <span>Community: Shaw / Vaishya</span>
+              <span>Community: Shaw</span>
               <span>Deoghar, Jharkhand</span>
             </div>
           </div> */}
