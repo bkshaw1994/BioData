@@ -103,18 +103,18 @@ export const initialBioData = {
         icon: "Heart"
       },
       {
-        relation: "Younger Brother",
-        name: "Badal Kumar Shaw",
-        status: "Preparing for Banking",
-        description: "Supportive, ambitious, and career-focused brother actively preparing for banking examinations.",
-        icon: "User"
-      },
-      {
         relation: "Younger Sister",
         name: "Bishakha Shaw",
         status: "Married & Well-Settled",
         description: "Married, cultured, and family-oriented younger sister, well-settled with family.",
         icon: "Smile"
+      },
+      {
+        relation: "Younger Brother",
+        name: "Badal Kumar Shaw",
+        status: "Preparing for Banking",
+        description: "Supportive, ambitious, and career-focused brother actively preparing for banking examinations.",
+        icon: "User"
       },
       {
         relation: "Younger Brother",
