@@ -37,7 +37,7 @@ export const initialBioData = {
     rashi: "Kanya (Virgo)",
     nakshatra: "Pushya / Punarvasu",
     charan: "4th Charan",
-    manglik: "Non-Manglik",
+    manglik: "Manglik",
     nadi: "Madhya",
     gan: "Dev Gan",
     sunSign: "Cancer",

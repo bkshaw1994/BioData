@@ -120,7 +120,7 @@ export const PrintBioData = ({ data }) => {
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Manglik Status:</span>
-                <span className="font-bold text-emerald-800">{h.manglik || "Non-Manglik (No)"}</span>
+                <span className="font-bold text-gray-900">{h.manglik || "Manglik"}</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Gan / Charan:</span>

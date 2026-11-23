@@ -148,7 +148,7 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
               </span>
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800">
                 <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                Non-Manglik
+                {data?.horoscope?.manglik || "Manglik"}
               </span>
             </div>
 
@@ -266,7 +266,7 @@ export const Hero = ({ data, onPrint, onOpenShare, onOpenEdit, onSelectPhoto }) 
                 <span className="text-warmborder">|</span>
                 <span>Shaw Community</span>
                 <span className="text-warmborder">|</span>
-                <span className="text-emerald-700 font-semibold">Non-Manglik</span>
+                <span className="text-amber-700 font-semibold">{data?.horoscope?.manglik || "Manglik"}</span>
               </div>
             </div>
           </div>

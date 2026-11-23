@@ -32,13 +32,13 @@ A modern, elegant, and fully responsive Marriage Bio-Data web application built 
    - **Candidate:** Bishal Kumar Shaw
    - **Current Role:** Senior / Lead Full-Stack & Frontend Engineer at **Cognizant**, Bengaluru
    - **Badges:** 32 Years • 6'0" (183 cm) • Bengaluru (Current) • Jasidih, Jharkhand (Hometown)
-   - **Specialty Badges:** Cognizant Brand Ambassador (`#CognizantAmbassadorBLR`), Non-Smoker, Non-Manglik.
+   - **Specialty Badges:** Cognizant Brand Ambassador (`#CognizantAmbassadorBLR`), Non-Smoker, Manglik.
    - **Featured Portrait:** Elegant gold double-border card with traditional corner flourishes, multi-photo thumbnail selector, and lightbox trigger.
 
 3. **Personal & Horoscope Details (2-Column Grid Card):**
    - **Personal Attributes:** Full Name, DOB (July 9, 1994), TOB (03:55 AM), POB (Jasidih, Jharkhand), Age (32 Years), Height (6'0"), Marital Status, Gotra (Kashyap), Complexion (Wheatish, 78 kg).
    - **Lifestyle & Habits:** Diet (Vegetarian & Non-Vegetarian), Non-smoker, Fitness-conscious (regular walking, home-cooked meals), Languages (English, Hindi, Bengali), Interests (Road trips, cinema, tech & gaming).
-   - **Kundli & Astrological Card:** Moon Sign (Kanya / Virgo), Nakshatra (Pushya / Punarvasu), Charan (4th), Gan (Dev Gan), Nadi (Madhya), and clear **Non-Manglik** status.
+   - **Kundli & Astrological Card:** Moon Sign (Kanya / Virgo), Nakshatra (Pushya / Punarvasu), Charan (4th), Gan (Dev Gan), Nadi (Madhya), and **Manglik** status.
 
 4. **Career & Education (Timeline & Structured Cards):**
    - **Present Position:** Senior / Lead Frontend & Full-Stack Developer at Cognizant (Bengaluru), 10+ Years Industry Experience.

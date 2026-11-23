@@ -237,16 +237,16 @@ export const PersonalInfo = ({ data, onOpenEdit }) => {
             </div>
 
             {/* Auspicious Manglik status highlight banner */}
-            <div className="mt-5 p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between">
+            <div className="mt-5 p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                <ShieldCheck className="w-5 h-5 text-amber-600" />
                 <div>
-                  <span className="text-xs font-bold text-emerald-900 uppercase tracking-wide block">Manglik Status</span>
-                  <span className="text-sm font-bold text-emerald-800">{h.manglik || "Non-Manglik (No)"}</span>
+                  <span className="text-xs font-bold text-amber-950 uppercase tracking-wide block">Manglik Status</span>
+                  <span className="text-sm font-bold text-amber-900">{h.manglik || "Manglik"}</span>
                 </div>
               </div>
-              <span className="text-[11px] font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">
-                Ideal Match
+              <span className="text-[11px] font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">
+                Kundli Particular
               </span>
             </div>
 
