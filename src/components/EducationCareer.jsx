@@ -167,7 +167,7 @@ export const EducationCareer = ({ data }) => {
                     Graduation: {edu?.graduation?.year || "2012 - 2016"}
                   </div>
                   <p className="text-xs sm:text-sm text-charcoal-600 mt-2.5 leading-relaxed">
-                    {edu?.graduation?.details || "First Class with Distinction in Electronics and Communication Engineering (ECE) with strong analytical and engineering foundation."}
+                    {edu?.graduation?.details || "Electronics and Communication Engineering (ECE) with strong analytical and engineering foundation."}
                   </p>
                 </div>
 

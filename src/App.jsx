@@ -79,11 +79,11 @@ export default function App() {
             data={bioData}
           /> */}
 
-          {/* Photo Gallery & Lifestyle */}
+          {/* Photo Gallery & Lifestyle
           <PhotoGallery
             data={bioData}
             onSelectPhoto={(photo) => setSelectedPhoto(photo)}
-          />
+          /> */}
 
           {/* Family Contact & Communication */}
           <ContactSection

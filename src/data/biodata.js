@@ -80,7 +80,7 @@ export const initialBioData = {
       degree: "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering",
       institution: "Engineering College / University",
       year: "2012 - 2016",
-      details: "First Class with Distinction in Electronics and Communication Engineering (ECE)."
+      details: "Electronics and Communication Engineering (ECE)."
     }
   },
 
