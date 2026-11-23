@@ -246,7 +246,7 @@ export const PrintBioData = ({ data }) => {
                 <div>
                   <span className="font-bold text-gray-900">Elder Sister: </span>
                   <span className="font-semibold text-gray-800">Married & Well-Settled</span>
-                  <div className="text-xs text-gray-600">Brother-in-law: Deepak (Established Professional)</div>
+                  <div className="text-xs text-gray-600">Married and well-settled with family</div>
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Sister</span>
               </div>

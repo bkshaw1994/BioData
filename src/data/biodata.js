@@ -115,10 +115,9 @@ export const initialBioData = {
       },
       {
         relation: "Elder Sister",
-        name: "Elder Sister (Married)",
-        status: "Happily Married",
-        spouse: "Deepak (Brother-in-law)",
-        description: "Well-settled with family; brother-in-law Deepak is an established professional.",
+        name: "Elder Sister",
+        status: "Married & Well-Settled",
+        description: "Happily married and well-settled with family.",
         icon: "Users"
       },
       {

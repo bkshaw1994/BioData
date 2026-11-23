@@ -51,7 +51,7 @@ A modern, elegant, and fully responsive Marriage Bio-Data web application built 
    - **Father:** Bishwanath Shaw *(Businessman / Retired Professional)*.
    - **Mother:** Smt. Mother's Name *(Homemaker / Loving Caretaker)*.
    - **Younger Brother:** Badal Kumar Shaw *(Software Professional / Working)*.
-   - **Elder Sister:** Happily Married (Brother-in-law: Deepak, established professional).
+   - **Elder Sister:** Married & Well-Settled with family.
    - **Sister:** Bishakha Shaw *(Educated & Working Professional)*.
    - **Family Values:** Mutual respect, warmth, close-knit bond, and high cultural regard.
 

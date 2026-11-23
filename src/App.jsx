@@ -5,7 +5,7 @@ import { Hero } from './components/Hero';
 import { PersonalInfo } from './components/PersonalInfo';
 import { EducationCareer } from './components/EducationCareer';
 import { FamilySection } from './components/FamilySection';
-import { PartnerPreferences } from './components/PartnerPreferences';
+// import { PartnerPreferences } from './components/PartnerPreferences';
 import { PhotoGallery } from './components/PhotoGallery';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -18,7 +18,7 @@ import { Share2, Printer, Sparkles, Edit3 } from 'lucide-react';
 export default function App() {
   const [bioData, setBioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v9') || localStorage.getItem('biodata_bishal_v8') || localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
+      const saved = localStorage.getItem('biodata_bishal_v10') || localStorage.getItem('biodata_bishal_v9') || localStorage.getItem('biodata_bishal_v8') || localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         // Ensure real photos are used if previously saved photos were placeholders
@@ -36,6 +36,12 @@ export default function App() {
         if (parsed?.education?.graduation) {
           parsed.education.graduation.degree = "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering";
           parsed.education.graduation.details = "First Class with Distinction in Electronics and Communication Engineering (ECE).";
+        }
+        // Clean brother-in-law details from elder sister
+        if (parsed?.family?.members?.[3]) {
+          delete parsed.family.members[3].spouse;
+          parsed.family.members[3].status = "Married & Well-Settled";
+          parsed.family.members[3].description = "Happily married and well-settled with family.";
         }
         // Remove smoking and drinking fields
         if (parsed?.personal?.smoking) {
@@ -89,9 +95,12 @@ export default function App() {
     if (updatedData?.career?.highlights) {
       updatedData.career.highlights = updatedData.career.highlights.filter(h => !h.includes("Ambassador"));
     }
+    if (updatedData?.family?.members?.[3]) {
+      delete updatedData.family.members[3].spouse;
+    }
     setBioData(updatedData);
     try {
-      localStorage.setItem('biodata_bishal_v9', JSON.stringify(updatedData));
+      localStorage.setItem('biodata_bishal_v10', JSON.stringify(updatedData));
     } catch (e) {
       console.error("Failed to persist biodata", e);
     }
@@ -100,6 +109,7 @@ export default function App() {
   const handleResetData = () => {
     setBioData(initialBioData);
     try {
+      localStorage.removeItem('biodata_bishal_v10');
       localStorage.removeItem('biodata_bishal_v9');
       localStorage.removeItem('biodata_bishal_v8');
       localStorage.removeItem('biodata_bishal_v7');
@@ -120,7 +130,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-ivory-100 text-charcoal-800 antialiased selection:bg-gold-200 selection:text-gold-900 bg-mandala-pattern">
-      
+
       {/* SCREEN VIEW (Hidden during @media print) */}
       <div className="print:hidden">
         {/* Navigation Bar */}
@@ -161,9 +171,9 @@ export default function App() {
           />
 
           {/* Desired Partner Preferences */}
-          <PartnerPreferences
+          {/* <PartnerPreferences
             data={bioData}
-          />
+          /> */}
 
           {/* Photo Gallery & Lifestyle */}
           <PhotoGallery
