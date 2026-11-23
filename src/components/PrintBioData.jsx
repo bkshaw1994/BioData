@@ -125,19 +125,23 @@ export const PrintBioData = ({ data }) => {
                 <span className="text-gray-600">Rashi:</span>
                 <span className="font-semibold text-gray-900">{h.rashi || "Cancer"}</span>
               </div>
+              {/* Commented out as of now - to be added later
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Nakshatra:</span>
                 <span className="font-semibold text-gray-900">{h.nakshatra || "Pushya / Punarvasu"}</span>
               </div>
+              */}
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Manglik Status:</span>
                 <span className="font-bold text-gray-900">{h.manglik || "Manglik"}</span>
               </div>
+              {/* Commented out as of now - to be added later
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Gan / Charan:</span>
                 <span className="font-semibold text-gray-900">{h.gan || "Dev"} / {h.charan || "4th"}</span>
               </div>
+              */}
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Hobbies:</span>

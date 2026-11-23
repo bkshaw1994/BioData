@@ -185,7 +185,7 @@ export const PersonalInfo = ({ data }) => {
                   <Smile className="w-3.5 h-3.5 text-gold-500" />
                   Interests:
                 </span>
-                {(p.hobbies || ["Cooking", "Road trips & Long drives", "Cinema & Storytelling", "Tech & Gaming"]).map((hobby, idx) => (
+                {(p.hobbies || ["Cooking", "Road trips & Long drives", "Cinema", "Tech & Gaming"]).map((hobby, idx) => (
                   <span key={idx} className="text-xs bg-white text-charcoal-700 border border-warmborder px-2.5 py-0.5 rounded-md">
                     {hobby}
                   </span>
@@ -233,6 +233,7 @@ export const PersonalInfo = ({ data }) => {
             {/* Kundli parameters table */}
             <div className="mt-5 space-y-3 font-sans">
 
+              {/* Astrological details commented out - to be added later
               <div className="flex items-center justify-between py-2 border-b border-gold-200/50">
                 <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Nakshatra</span>
                 <span className="text-sm font-semibold text-charcoal-900">{h.nakshatra || "Pushya / Punarvasu"}</span>
@@ -252,6 +253,7 @@ export const PersonalInfo = ({ data }) => {
                 <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Nadi</span>
                 <span className="text-sm font-semibold text-charcoal-900">{h.nadi || "Madhya"}</span>
               </div>
+              */}
 
               <div className="flex items-center justify-between py-2 border-b border-gold-200/50">
                 <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Rashi</span>
@@ -262,13 +264,6 @@ export const PersonalInfo = ({ data }) => {
                 <span className="text-xs uppercase tracking-wider text-charcoal-500 font-semibold">Gotra</span>
                 <span className="text-sm font-semibold text-charcoal-900">{p.gotra || "Kashyap"}</span>
               </div>
-            </div>
-
-            {/* Note on Kundli matching */}
-            <div className="mt-6 p-4 rounded-2xl bg-white/80 border border-gold-200 text-center">
-              <span className="text-xs text-charcoal-600 block leading-relaxed">
-                ✨ <strong>Astrological Note:</strong> Complete Kundli chart and detailed birth particulars are gladly available for gun milan / horoscope matching upon mutual interest.
-              </span>
             </div>
 
           </div>

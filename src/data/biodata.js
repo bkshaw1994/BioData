@@ -21,7 +21,7 @@ export const initialBioData = {
     casteCommunity: "Shaw",
     gotra: "Kashyap",
     fitness: "Fitness-conscious (Regular walking, badminton & home-cooked meals)",
-    hobbies: ["Cooking", "Road trips & Long drives", "Cinema & Storytelling", "Tech & Gaming", "Podcasts & Reading"],
+    hobbies: ["Cooking", "Road trips & Long drives", "Cinema", "Tech & Gaming"],
     languages: ["English (Fluent)", "Hindi (Native)", "Bengali (Conversational)"],
     tagline: "Senior Associate at Cognizant | Bengaluru, Karnataka",
     aboutMe: "A balanced, warm-hearted, and grounded individual who believes in mutual respect, family values, and continuous growth. Passionate about software architecture, clean code, and emerging AI technologies, while equally enjoying peaceful weekends, cooking, good movies, road trips, and quality time with loved ones.",
@@ -30,13 +30,12 @@ export const initialBioData = {
   // Horoscope & Astrological Details
   horoscope: {
     rashi: "Cancer",
-    nakshatra: "Pushya / Punarvasu",
-    charan: "4th Charan",
+    // nakshatra: "Pushya / Punarvasu",
+    // charan: "4th Charan",
     manglik: "Manglik",
-    nadi: "Madhya",
-    gan: "Dev Gan",
+    // nadi: "Madhya",
+    // gan: "Dev Gan",
     sunSign: "Cancer",
-    horoscopeMatching: "Horoscope details available on request / Open to match",
   },
 
   // Career & Professional Highlights
