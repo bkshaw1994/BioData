@@ -20,7 +20,6 @@ export const initialBioData = {
     religion: "Hindu",
     casteCommunity: "Shaw",
     gotra: "Kashyap",
-    diet: "Vegetarian & Non-Vegetarian",
     fitness: "Fitness-conscious (Regular walking, badminton & home-cooked meals)",
     hobbies: ["Cooking", "Road trips & Long drives", "Cinema & Storytelling", "Tech & Gaming", "Podcasts & Reading"],
     languages: ["English (Fluent)", "Hindi (Native)", "Bengali (Conversational)"],

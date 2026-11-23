@@ -6,7 +6,6 @@ import {
   MapPin,
   Ruler,
   Compass,
-  Utensils,
   Heart,
   Sparkles,
   Languages,
@@ -165,20 +164,8 @@ export const PersonalInfo = ({ data }) => {
 
             </div>
 
-            {/* Diet & Lifestyle Highlight Box */}
+            {/* Lifestyle Highlights */}
             <div className="mt-6 pt-5 border-t border-warmborder/80 space-y-4">
-              <div className="bg-ivory-100 p-4 rounded-2xl border border-warmborder flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <Utensils className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-xs font-bold text-charcoal-700 uppercase tracking-wide block">Dietary Preference</span>
-                    <p className="text-sm text-charcoal-800 font-medium">
-                      {p.diet || "Vegetarian & Non-Vegetarian"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
               {/* Languages Known Badges */}
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs font-bold text-charcoal-600 flex items-center gap-1 mr-1">

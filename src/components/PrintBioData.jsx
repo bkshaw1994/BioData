@@ -128,10 +128,6 @@ export const PrintBioData = ({ data }) => {
               </div>
 
               <div className="flex justify-between border-b border-gray-200 py-0.5">
-                <span className="text-gray-600">Dietary Preference:</span>
-                <span className="font-semibold text-gray-900">{p.diet}</span>
-              </div>
-              <div className="flex justify-between border-b border-gray-200 py-0.5">
                 <span className="text-gray-600">Hobbies & Interests:</span>
                 <span className="font-semibold text-gray-900">{Array.isArray(p.hobbies) ? p.hobbies.join(', ') : "Cooking, Road trips, Cinema, Tech"}</span>
               </div>
