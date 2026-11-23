@@ -18,9 +18,14 @@ import { Share2, Printer, Sparkles, Edit3 } from 'lucide-react';
 export default function App() {
   const [bioData, setBioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v1');
+      const saved = localStorage.getItem('biodata_bishal_v2');
       if (saved) {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        // Ensure real photos are used if previously saved photos were placeholders
+        if (parsed?.photos?.[0]?.url?.includes('unsplash')) {
+          parsed.photos = initialBioData.photos;
+        }
+        return parsed;
       }
     } catch (e) {
       console.error("Failed to load saved biodata", e);
@@ -35,7 +40,7 @@ export default function App() {
   const handleSaveData = (updatedData) => {
     setBioData(updatedData);
     try {
-      localStorage.setItem('biodata_bishal_v1', JSON.stringify(updatedData));
+      localStorage.setItem('biodata_bishal_v2', JSON.stringify(updatedData));
     } catch (e) {
       console.error("Failed to persist biodata", e);
     }
@@ -44,6 +49,7 @@ export default function App() {
   const handleResetData = () => {
     setBioData(initialBioData);
     try {
+      localStorage.removeItem('biodata_bishal_v2');
       localStorage.removeItem('biodata_bishal_v1');
     } catch (e) {
       console.error("Failed to clear biodata", e);

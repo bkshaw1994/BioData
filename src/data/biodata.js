@@ -168,31 +168,31 @@ export const initialBioData = {
     bestTimeToCall: "10:00 AM – 8:00 PM IST",
   },
 
-  // Photo gallery with stylish professional placeholder images
+  // Candidate Real Photos
   photos: [
     {
       id: "p1",
-      url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop",
-      caption: "Portrait Profile",
+      url: "/photos/bishal_portrait_web.jpg",
+      caption: "Bishal Kumar Shaw (Portrait)",
       tag: "Primary Portrait"
     },
     {
       id: "p2",
-      url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
-      caption: "Professional & Tech Event",
-      tag: "Cognizant Ambassador"
+      url: "/photos/bishal_heritage_pillars.jpg",
+      caption: "Heritage Palace Architecture",
+      tag: "Cultural & Travel"
     },
     {
       id: "p3",
-      url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1200&auto=format&fit=crop",
-      caption: "Casual & Travel Outing",
-      tag: "Lifestyle & Travel"
+      url: "/photos/bishal_outdoor.jpg",
+      caption: "Full Length (6'0\" Height)",
+      tag: "Lifestyle & Outing"
     },
     {
       id: "p4",
-      url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
-      caption: "Traditional / Festive Gathering",
-      tag: "Ethnic Wear"
+      url: "/photos/bishal_heritage_arch.jpg",
+      caption: "Traditional Courtyard Setting",
+      tag: "Traditional & Leisure"
     }
   ]
 };
