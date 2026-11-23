@@ -80,7 +80,7 @@ export const initialBioData = {
       degree: "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering",
       institution: "Engineering College / University",
       year: "2012 - 2016",
-      details: "Electronics and Communication Engineering (ECE)."
+      details: ""
     }
   },
 
@@ -134,10 +134,10 @@ export const initialBioData = {
 
   // Contact & Communication
   contact: {
-    primaryContactPerson: "Bishwanath Shaw (Father) / Bishal Kumar Shaw",
-    phone: "+91 98765 43210",
-    alternatePhone: "+91 91234 56789",
-    email: "bishal.shaw@example.com",
+    primaryContactPerson: "Bishwanath Shaw (Father)",
+    phone: "+91 9031938060",
+    alternatePhone: "+91 9031938060",
+    email: "",
     residenceAddress: "Bengaluru, Karnataka, India",
     nativeAddress: "Jasidih, Deoghar District, Jharkhand - 814142",
     bestTimeToCall: "10:00 AM – 8:00 PM IST",
