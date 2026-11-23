@@ -159,20 +159,20 @@ export const PrintBioData = ({ data }) => {
               </div>
 
               <div className="grid grid-cols-2 gap-3 text-[9pt]">
-                <div className="p-2 rounded-lg border border-gray-200">
-                  <span className="font-bold text-gray-900 block text-xs">
-                    {e?.postGraduation?.degree || "Multi-Cloud & DevOps Certification"}
-                  </span>
-                  <span className="text-gray-700 font-semibold">{e?.postGraduation?.institution || "Hero Vired"}</span>
-                  <div className="text-gray-500 text-[8.5pt]">AWS, Azure, Docker, Kubernetes & CI/CD</div>
-                </div>
-
-                <div className="p-2 rounded-lg border border-gray-200">
+                <div className="p-2.5 rounded-lg border border-gray-200">
                   <span className="font-bold text-gray-900 block text-xs">
                     {e?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
                   </span>
                   <span className="text-gray-700 font-semibold">{e?.graduation?.institution || "Engineering College"}</span>
-                  <div className="text-gray-500 text-[8.5pt]">Computer Science & Engineering</div>
+                  <div className="text-gray-500 text-[8.5pt]">Computer Science & Engineering • {e?.graduation?.year || "2012 - 2016"}</div>
+                </div>
+
+                <div className="p-2.5 rounded-lg border border-gray-200">
+                  <span className="font-bold text-gray-900 block text-xs">
+                    {e?.schooling?.school || "Senior Secondary High School"}
+                  </span>
+                  <span className="text-gray-700 font-semibold">{e?.schooling?.location || "Jasidih / Deoghar, Jharkhand"}</span>
+                  <div className="text-gray-500 text-[8.5pt]">{e?.schooling?.details || "Science Stream (Mathematics, Physics, Chemistry)"}</div>
                 </div>
               </div>
             </div>

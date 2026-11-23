@@ -82,12 +82,6 @@ export const initialBioData = {
 
   // Educational Background
   education: {
-    postGraduation: {
-      degree: "Postgraduate Certification in Multi-Cloud & DevOps",
-      institution: "Hero Vired",
-      year: "Completed",
-      details: "Comprehensive hands-on training in AWS, Azure, CI/CD, Containerization, and Cloud Native Architectures."
-    },
     graduation: {
       degree: "Bachelor of Technology / Engineering (B.Tech / B.E.)",
       institution: "State Engineering University / College [Click to customize]",

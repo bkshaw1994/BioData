@@ -18,12 +18,16 @@ import { Share2, Printer, Sparkles, Edit3 } from 'lucide-react';
 export default function App() {
   const [bioData, setBioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v2');
+      const saved = localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         // Ensure real photos are used if previously saved photos were placeholders
         if (parsed?.photos?.[0]?.url?.includes('unsplash')) {
           parsed.photos = initialBioData.photos;
+        }
+        // Remove Postgraduate certificate if present in saved storage
+        if (parsed?.education?.postGraduation) {
+          delete parsed.education.postGraduation;
         }
         return parsed;
       }
@@ -38,9 +42,13 @@ export default function App() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const handleSaveData = (updatedData) => {
+    // Ensure no postGraduation is persisted
+    if (updatedData?.education?.postGraduation) {
+      delete updatedData.education.postGraduation;
+    }
     setBioData(updatedData);
     try {
-      localStorage.setItem('biodata_bishal_v2', JSON.stringify(updatedData));
+      localStorage.setItem('biodata_bishal_v3', JSON.stringify(updatedData));
     } catch (e) {
       console.error("Failed to persist biodata", e);
     }
@@ -49,6 +57,7 @@ export default function App() {
   const handleResetData = () => {
     setBioData(initialBioData);
     try {
+      localStorage.removeItem('biodata_bishal_v3');
       localStorage.removeItem('biodata_bishal_v2');
       localStorage.removeItem('biodata_bishal_v1');
     } catch (e) {
