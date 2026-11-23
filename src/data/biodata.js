@@ -23,10 +23,10 @@ export const initialBioData = {
     gotra: "Kashyap",
     diet: "Vegetarian & Non-Vegetarian",
     fitness: "Fitness-conscious (Regular walking, badminton & home-cooked meals)",
-    hobbies: ["Road trips & Long drives", "Cinema & Storytelling", "Tech & Gaming", "Podcasts & Reading"],
+    hobbies: ["Cooking", "Road trips & Long drives", "Cinema & Storytelling", "Tech & Gaming", "Podcasts & Reading"],
     languages: ["English (Fluent)", "Hindi (Native)", "Bengali (Conversational)"],
     tagline: "Senior Associate at Cognizant | Bengaluru, Karnataka",
-    aboutMe: "A balanced, warm-hearted, and grounded individual who believes in mutual respect, family values, and continuous growth. Passionate about software architecture, clean code, and emerging AI technologies, while equally enjoying peaceful weekends, good movies, road trips, and quality time with loved ones.",
+    aboutMe: "A balanced, warm-hearted, and grounded individual who believes in mutual respect, family values, and continuous growth. Passionate about software architecture, clean code, and emerging AI technologies, while equally enjoying peaceful weekends, cooking, good movies, road trips, and quality time with loved ones.",
   },
 
   // Horoscope & Astrological Details
