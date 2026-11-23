@@ -8,7 +8,8 @@ import {
   Sparkles,
   MapPin,
   Smile,
-  Shield
+  Shield,
+  GraduationCap
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
@@ -56,7 +57,7 @@ export const FamilySection = ({ data }) => {
         </div>
 
         {/* Distinct Respectful Profile Cards for Each Family Member */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {/* 1. Father Card */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
@@ -74,7 +75,7 @@ export const FamilySection = ({ data }) => {
               </h3>
 
               <div className="text-xs font-semibold text-gold-600 mt-0.5">
-                {members[0]?.status || "Businessman / Retired Professional"}
+                {members[0]?.status || "Businessman"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
@@ -100,7 +101,7 @@ export const FamilySection = ({ data }) => {
               </div>
 
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                {members[1]?.name?.includes('[') ? "Smt. Shaw" : (members[1]?.name || "Smt. Shaw")}
+                {members[1]?.name || "Laxmi Devi"}
               </h3>
 
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
@@ -118,7 +119,7 @@ export const FamilySection = ({ data }) => {
             </div>
           </div>
 
-          {/* 3. Brother Card */}
+          {/* 3. Younger Brother - Badal Kumar Shaw */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
             <div>
@@ -143,7 +144,7 @@ export const FamilySection = ({ data }) => {
             </div>
 
             <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-              <span>Location: Bengaluru / India</span>
+              <span>Location: Jasidih, Jharkhand</span>
               <span className="text-charcoal-600 font-medium">Brother</span>
             </div>
           </div>
@@ -177,6 +178,38 @@ export const FamilySection = ({ data }) => {
               <span className="text-purple-700 font-medium">Younger Sister</span>
             </div>
           </div>
+
+          {/* 5. Younger Brother - Shawan Shaw (Studying in Graduation) Card */}
+          <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
+            <CornerOrnament position="top-right" />
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200">
+                  Younger Brother
+                </span>
+                <GraduationCap className="w-5 h-5 text-amber-600" />
+              </div>
+
+              <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
+                {members[4]?.name || "Shawan Shaw"}
+              </h3>
+
+              <div className="text-xs font-semibold text-amber-800 mt-1 inline-flex items-center gap-1 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">
+                {members[4]?.status || "Studying in Graduation"}
+              </div>
+
+              <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
+                {members[4]?.description || "Supportive and ambitious younger brother, currently pursuing his graduation."}
+              </p>
+            </div>
+
+            <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
+              <span>Location: Jasidih, Jharkhand</span>
+              <span className="text-amber-800 font-medium">Younger Brother</span>
+            </div>
+          </div>
+
+
 
           {/* 6. Family Values & Cultural Summary Card
           <div className="bg-gradient-to-br from-[#FAF5EC] to-[#F3ECE0] rounded-3xl p-6 border-2 border-gold-200 shadow-card flex flex-col justify-between">

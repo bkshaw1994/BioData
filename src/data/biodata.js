@@ -115,6 +115,13 @@ export const initialBioData = {
         status: "Married & Well-Settled",
         description: "Married, cultured, and family-oriented younger sister, well-settled with family.",
         icon: "Smile"
+      },
+      {
+        relation: "Younger Brother",
+        name: "Shawan Shaw",
+        status: "Studying in Graduation",
+        description: "Supportive and ambitious younger brother, currently pursuing his higher education / graduation.",
+        icon: "User"
       }
     ]
   },
@@ -135,7 +142,7 @@ export const initialBioData = {
   contact: {
     primaryContactPerson: "Bishwanath Shaw (Father)",
     phone: "+91 9031938060",
-    alternatePhone: "+91 9031938060",
+    alternatePhone: "+91 7209151048",
     email: "",
     residenceAddress: "Bengaluru, Karnataka, India",
     nativeAddress: "Jasidih, Deoghar District, Jharkhand - 814142",

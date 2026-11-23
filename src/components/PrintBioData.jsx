@@ -266,22 +266,15 @@ export const PrintBioData = ({ data }) => {
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Sister</span>
               </div>
-            </div>
-          </div>
 
-          {/* Section: Partner Expectations */}
-          <div className="mb-4">
-            <div className="bg-amber-100/70 border-l-4 border-amber-700 px-3 py-1 font-serif font-bold text-xs text-amber-950 uppercase tracking-wider mb-2">
-              4. Desired Partner Preferences
-            </div>
-
-            <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-[9pt] p-2.5 rounded-lg border border-gray-200 bg-gray-50/40">
-              <div><strong>Age Range:</strong> {pref.ageRange || "26 – 31 Years"}</div>
-              <div><strong>Height:</strong> {pref.heightRange || "5'2\" – 5'8\""}</div>
-              <div><strong>Education:</strong> {pref.education || "Graduate / Post-Graduate"}</div>
-              <div><strong>Career:</strong> {pref.profession || "Working / Career-oriented supported"}</div>
-              <div className="col-span-2 pt-1 text-[8.5pt] text-gray-600 italic">
-                "{pref.summary}"
+              {/* Younger Brother - Shawan */}
+              <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
+                <div>
+                  <span className="font-bold text-gray-900">Younger Brother: </span>
+                  <span className="font-semibold text-gray-800">{f.members?.[4]?.name || "Shawan Shaw"}</span>
+                  <div className="text-xs text-gray-600">{f.members?.[4]?.status || "Studying in Graduation"}</div>
+                </div>
+                <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Brother</span>
               </div>
             </div>
           </div>
@@ -289,7 +282,7 @@ export const PrintBioData = ({ data }) => {
           {/* Section: Contact & Communication */}
           <div className="mb-4">
             <div className="bg-amber-100/70 border-l-4 border-amber-700 px-3 py-1 font-serif font-bold text-xs text-amber-950 uppercase tracking-wider mb-2">
-              5. Contact & Addresses for Communication
+              4. Contact & Addresses for Communication
             </div>
 
             <div className="grid grid-cols-2 gap-4 text-[9.5pt]">
@@ -297,7 +290,7 @@ export const PrintBioData = ({ data }) => {
                 <span className="font-bold text-gray-900 block mb-1">Direct Family Contacts:</span>
                 <div><strong>Primary Contact:</strong> {contact.primaryContactPerson || "Bishwanath Shaw"}</div>
                 <div><strong>Primary Phone:</strong> {contact.phone || "+91 9031938060"}</div>
-                <div><strong>Alternate Contact:</strong> {contact.alternatePhone || "+91 9031938060"}</div>
+                <div><strong>Alternate Contact:</strong> {contact.alternatePhone || "+91 7209151048"}</div>
               </div>
 
               <div className="p-2.5 rounded-lg border border-gray-200">
