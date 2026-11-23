@@ -51,7 +51,7 @@ export const Navbar = ({ onDownload, isDownloading, data }) => {
 
       {/* Main Navbar */}
       <header
-        className={`transition-all duration-300 ${scrolled
+        className={`relative transition-all duration-300 ${scrolled
           ? 'bg-ivory-100/95 backdrop-blur-md shadow-soft border-b border-warmborder/80 py-2.5'
           : 'bg-ivory-100/80 backdrop-blur-sm border-b border-warmborder/40 py-3.5'
           }`}
@@ -126,36 +126,36 @@ export const Navbar = ({ onDownload, isDownloading, data }) => {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
-        {mobileMenuOpen && (
-          <div className="sm:hidden bg-ivory-100/98 border-b border-warmborder px-4 pt-3 pb-5 space-y-2 shadow-lg animate-fadeIn">
-            <div className="pb-3 border-b border-warmborder/60">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onDownload();
-                }}
-                disabled={isDownloading}
-                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-gold-500 shadow-sm disabled:opacity-60"
+        {/* Mobile Left-Side Translucent Dropdown Menu with Top-to-Bottom Slide Transition */}
+        <div
+          className={`sm:hidden absolute top-full left-3 mt-1.5 w-60 max-w-[85vw] rounded-2xl bg-white/80 backdrop-blur-md border border-gold-200/90 shadow-xl p-3 transform transition-all duration-300 ease-in-out origin-top z-50 ${
+            mobileMenuOpen
+              ? 'opacity-100 translate-y-0 pointer-events-auto scale-y-100'
+              : 'opacity-0 -translate-y-4 pointer-events-none scale-y-95'
+          }`}
+        >
+          <nav className="flex flex-col space-y-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="px-3.5 py-2.5 rounded-xl text-sm font-semibold text-charcoal-800 hover:text-gold-700 hover:bg-gold-100/60 transition-all flex items-center justify-between group"
               >
-                <FileDown className="w-3.5 h-3.5" />
-                <span>{isDownloading ? "Downloading..." : "Download Bio-Data"}</span>
-              </button>
-            </div>
+                <span>{link.name}</span>
+                <span className="text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity text-xs">→</span>
+              </a>
+            ))}
+          </nav>
+        </div>
 
-            <nav className="flex flex-col space-y-1 pt-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="px-3 py-2 rounded-lg text-sm font-medium text-charcoal-700 hover:bg-gold-50 hover:text-gold-600 transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
-          </div>
+        {/* Backdrop for tapping outside to slide close */}
+        {mobileMenuOpen && (
+          <div
+            onClick={() => setMobileMenuOpen(false)}
+            className="sm:hidden fixed inset-0 z-40 bg-black/5 backdrop-blur-[0.5px] transition-opacity"
+            aria-hidden="true"
+          />
         )}
       </header>
     </div>
