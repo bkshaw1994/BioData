@@ -162,7 +162,7 @@ export const PrintBioData = ({ data }) => {
                 <div className="flex justify-between items-start">
                   <div>
                     <span className="font-bold text-gray-900 block text-xs">
-                      {e?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
+                      {e?.graduation?.degree || "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering"}
                     </span>
                     <span className="text-gray-700 font-semibold">{e?.graduation?.institution || "Engineering College / University"}</span>
                   </div>

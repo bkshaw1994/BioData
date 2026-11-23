@@ -1,15 +1,15 @@
 import React from 'react';
-import { 
-  Users, 
-  Heart, 
-  UserCheck, 
-  User, 
-  Home, 
-  Sparkles, 
-  Edit3, 
-  MapPin, 
-  Smile, 
-  Shield 
+import {
+  Users,
+  Heart,
+  UserCheck,
+  User,
+  Home,
+  Sparkles,
+  Edit3,
+  MapPin,
+  Smile,
+  Shield
 } from 'lucide-react';
 import { GoldDivider, CornerOrnament, LotusIcon } from './DecorativeIcons';
 
@@ -20,7 +20,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
   return (
     <section id="family" className="py-12 sm:py-16 bg-[#FAF7F2] border-t border-warmborder/70 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 uppercase tracking-widest bg-gold-100/60 px-3 py-1 rounded-full border border-gold-200">
@@ -66,7 +66,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
 
         {/* Distinct Respectful Profile Cards for Each Family Member */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
+
           {/* 1. Father Card */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
@@ -81,7 +81,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
                 {members[0]?.name || "Bishwanath Shaw"}
               </h3>
-              
+
               <div className="text-xs font-semibold text-gold-600 mt-0.5">
                 {members[0]?.status || "Businessman / Retired Professional [Editable]"}
               </div>
@@ -114,7 +114,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
                   {members[1]?.name ? "Edit Name" : "Add Name"}
                 </button>
               </h3>
-              
+
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
                 {members[1]?.status || "Homemaker / Loving Caretaker [Editable]"}
               </div>
@@ -144,7 +144,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
                 {members[2]?.name || "Badal Kumar Shaw"}
               </h3>
-              
+
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
                 {members[2]?.status || "Working Professional / Software Engineer [Editable]"}
               </div>
@@ -160,7 +160,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
             </div>
           </div>
 
-          {/* 4. Elder Sister (Married) Card */}
+          {/* 4. Elder Sister (Married) Card
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
             <div>
@@ -174,7 +174,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
                 Elder Sister
               </h3>
-              
+
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
                 Married & Well-Settled
               </div>
@@ -192,7 +192,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <span>Status: Happily Married</span>
               <span className="text-purple-700 font-medium">Sister</span>
             </div>
-          </div>
+          </div> */}
 
           {/* 5. Sister - Bishakha Shaw Card */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
@@ -208,9 +208,9 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
                 Bishakha Shaw
               </h3>
-              
+
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                Educated & Working Professional [Editable]
+                Educated & Working Professional
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
@@ -224,7 +224,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
             </div>
           </div>
 
-          {/* 6. Family Values & Cultural Summary Card */}
+          {/* 6. Family Values & Cultural Summary Card
           <div className="bg-gradient-to-br from-[#FAF5EC] to-[#F3ECE0] rounded-3xl p-6 border-2 border-gold-200 shadow-card flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 text-gold-700">
@@ -245,7 +245,7 @@ export const FamilySection = ({ data, onOpenEdit }) => {
               <span>Community: Shaw / Vaishya</span>
               <span>Deoghar, Jharkhand</span>
             </div>
-          </div>
+          </div> */}
 
         </div>
 

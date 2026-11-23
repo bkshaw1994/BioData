@@ -256,7 +256,7 @@ export const EditBioModal = ({ isOpen, onClose, data, onSave, onReset }) => {
                   <label className="text-xs text-charcoal-600 font-medium block mb-1">Degree Title</label>
                   <input
                     type="text"
-                    value={formData.education?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
+                    value={formData.education?.graduation?.degree || "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering"}
                     onChange={(e) => handleEducationChange('graduation', 'degree', e.target.value)}
                     className="w-full px-3 py-2 text-sm rounded-lg border border-warmborder focus:outline-none focus:border-gold-500 bg-ivory-50"
                   />

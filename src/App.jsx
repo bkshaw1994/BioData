@@ -18,7 +18,7 @@ import { Share2, Printer, Sparkles, Edit3 } from 'lucide-react';
 export default function App() {
   const [bioData, setBioData] = useState(() => {
     try {
-      const saved = localStorage.getItem('biodata_bishal_v8') || localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
+      const saved = localStorage.getItem('biodata_bishal_v9') || localStorage.getItem('biodata_bishal_v8') || localStorage.getItem('biodata_bishal_v7') || localStorage.getItem('biodata_bishal_v6') || localStorage.getItem('biodata_bishal_v5') || localStorage.getItem('biodata_bishal_v4') || localStorage.getItem('biodata_bishal_v3') || localStorage.getItem('biodata_bishal_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         // Ensure real photos are used if previously saved photos were placeholders
@@ -31,6 +31,11 @@ export default function App() {
         }
         if (parsed?.education?.schooling) {
           delete parsed.education.schooling;
+        }
+        // Ensure degree reflects Electronics & Communication Engineering
+        if (parsed?.education?.graduation) {
+          parsed.education.graduation.degree = "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering";
+          parsed.education.graduation.details = "First Class with Distinction in Electronics and Communication Engineering (ECE).";
         }
         // Remove smoking and drinking fields
         if (parsed?.personal?.smoking) {
@@ -86,7 +91,7 @@ export default function App() {
     }
     setBioData(updatedData);
     try {
-      localStorage.setItem('biodata_bishal_v8', JSON.stringify(updatedData));
+      localStorage.setItem('biodata_bishal_v9', JSON.stringify(updatedData));
     } catch (e) {
       console.error("Failed to persist biodata", e);
     }
@@ -95,6 +100,7 @@ export default function App() {
   const handleResetData = () => {
     setBioData(initialBioData);
     try {
+      localStorage.removeItem('biodata_bishal_v9');
       localStorage.removeItem('biodata_bishal_v8');
       localStorage.removeItem('biodata_bishal_v7');
       localStorage.removeItem('biodata_bishal_v6');

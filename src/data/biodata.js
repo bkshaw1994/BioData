@@ -80,10 +80,10 @@ export const initialBioData = {
   // Educational Background
   education: {
     graduation: {
-      degree: "Bachelor of Technology / Engineering (B.Tech / B.E.)",
+      degree: "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering",
       institution: "State Engineering University / College [Click to customize]",
       year: "2012 - 2016",
-      details: "First Class with Distinction in Electronics and Communication Engineering."
+      details: "First Class with Distinction in Electronics and Communication Engineering (ECE)."
     }
   },
 

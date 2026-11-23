@@ -174,7 +174,7 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                     </button>
                   </div>
                   <h4 className="font-serif font-bold text-charcoal-900 text-lg sm:text-xl mt-2.5">
-                    {edu?.graduation?.degree || "Bachelor of Technology / Engineering (B.Tech / B.E.)"}
+                    {edu?.graduation?.degree || "Bachelor of Technology (B.Tech) - Electronics & Communication Engineering"}
                   </h4>
                   <div className="text-sm sm:text-base font-semibold text-charcoal-800 mt-1">
                     {edu?.graduation?.institution || "Engineering College / University [Click to customize]"}
@@ -183,7 +183,7 @@ export const EducationCareer = ({ data, onOpenEdit }) => {
                     Graduation: {edu?.graduation?.year || "2012 - 2016"}
                   </div>
                   <p className="text-xs sm:text-sm text-charcoal-600 mt-2.5 leading-relaxed">
-                    {edu?.graduation?.details || "First Class with Distinction in Electronics and Communication Engineering with strong analytical, algorithms, and software design foundation."}
+                    {edu?.graduation?.details || "First Class with Distinction in Electronics and Communication Engineering (ECE) with strong analytical and engineering foundation."}
                   </p>
                 </div>
 
