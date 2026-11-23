@@ -252,7 +252,7 @@ export const PrintBioData = ({ data }) => {
                 <div>
                   <span className="font-bold text-gray-900">Younger Brother: </span>
                   <span className="font-semibold text-gray-800">{f.members?.[2]?.name || "Badal Kumar Shaw"}</span>
-                  <div className="text-xs text-gray-600">{f.members?.[2]?.status || "Software Professional / Working"}</div>
+                  <div className="text-xs text-gray-600">{f.members?.[2]?.status || "Preparing for Banking"}</div>
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Brother</span>
               </div>

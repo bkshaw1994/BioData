@@ -135,11 +135,11 @@ export const FamilySection = ({ data }) => {
               </h3>
 
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                {members[2]?.status || "Software Professional / Working"}
+                {members[2]?.status || "Preparing for Banking"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                {members[2]?.description || "Supportive younger brother, career-focused, well-educated, and actively building his professional career."}
+                {members[2]?.description || "Supportive younger brother, career-focused, well-educated, and actively preparing for banking examinations."}
               </p>
             </div>
 

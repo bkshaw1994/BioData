@@ -105,8 +105,8 @@ export const initialBioData = {
       {
         relation: "Younger Brother",
         name: "Badal Kumar Shaw",
-        status: "Software Professional / Working Professional",
-        description: "Supportive, ambitious, and well-settled brother pursuing his professional career.",
+        status: "Preparing for Banking",
+        description: "Supportive, ambitious, and career-focused brother actively preparing for banking examinations.",
         icon: "User"
       },
       {
