@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { initialBioData } from './data/biodata';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -109,6 +110,8 @@ export default function App() {
       {/* DEDICATED PDF EXPORT DOM CONTAINER (Rendered off-screen for instant PDF direct download) */}
       <PrintBioData data={bioData} />
 
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
