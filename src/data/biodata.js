@@ -106,22 +106,28 @@ export const initialBioData = {
         relation: "Younger Sister",
         name: "Bishakha Shaw",
         status: "Married & Well-Settled",
-        description: "Married, cultured, and family-oriented younger sister, well-settled with family.",
+        maritalStatus: "Married",
+        location: "Kolkata, India",
+        description: "Married, cultured, and family-oriented younger sister, happily married and well-settled with family.",
         icon: "Smile"
       },
       {
         relation: "Younger Brother",
         name: "Badal Kumar Shaw",
         status: "Preparing for Banking",
-        description: "Supportive, ambitious, and career-focused brother actively preparing for banking examinations.",
+        maritalStatus: "Unmarried",
+        location: "Jasidih, India",
+        description: "Supportive, ambitious, and career-focused younger brother (unmarried), actively preparing for banking examinations.",
         icon: "User"
       },
       {
         relation: "Younger Brother",
         name: "Shawan Shaw",
         status: "Studying in Graduation",
-        description: "Supportive and ambitious younger brother, currently pursuing his higher education / graduation.",
-        icon: "User"
+        maritalStatus: "Unmarried",
+        location: "Jasidih, India",
+        description: "Supportive and ambitious younger brother (unmarried), currently pursuing his higher education / graduation.",
+        icon: "GraduationCap"
       }
     ]
   },

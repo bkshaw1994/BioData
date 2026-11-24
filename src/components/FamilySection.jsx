@@ -17,6 +17,12 @@ export const FamilySection = ({ data }) => {
   const family = data?.family || {};
   const members = family?.members || [];
 
+  const father = members.find(m => m.relation === "Father") || members[0] || {};
+  const mother = members.find(m => m.relation === "Mother") || members[1] || {};
+  const brotherBadal = members.find(m => m.name?.includes("Badal")) || {};
+  const sisterBishakha = members.find(m => m.name?.includes("Bishakha") || m.relation?.includes("Sister")) || {};
+  const brotherShawan = members.find(m => m.name?.includes("Shawan")) || {};
+
   return (
     <section id="family" className="py-12 sm:py-16 bg-[#FAF7F2] border-t border-warmborder/70 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,15 +77,15 @@ export const FamilySection = ({ data }) => {
               </div>
 
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                {members[0]?.name || "Bishwanath Shaw"}
+                {father.name || "Bishwanath Shaw"}
               </h3>
 
               <div className="text-xs font-semibold text-gold-600 mt-0.5">
-                {members[0]?.status || "Businessman"}
+                {father.status || "Businessman"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                {members[0]?.description || "Head of the family, providing guidance with wisdom, strong moral principles, and continuous encouragement for all family aspirations."}
+                {father.description || "Head of the family, providing guidance with wisdom, strong moral principles, and continuous encouragement for all family aspirations."}
               </p>
             </div>
 
@@ -101,15 +107,15 @@ export const FamilySection = ({ data }) => {
               </div>
 
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                {members[1]?.name || "Laxmi Devi"}
+                {mother.name || "Laxmi Devi"}
               </h3>
 
               <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                {members[1]?.status || "Homemaker"}
+                {mother.status || "Homemaker"}
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                {members[1]?.description || "The heart and emotional soul of our household, upholding cultural values, hospitality, and nurturing warmth across generations."}
+                {mother.description || "The heart and emotional soul of our household, upholding cultural values, hospitality, and nurturing warmth across generations."}
               </p>
             </div>
 
@@ -119,37 +125,7 @@ export const FamilySection = ({ data }) => {
             </div>
           </div>
 
-          {/* 3. Younger Brother - Badal Kumar Shaw */}
-          <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
-            <CornerOrnament position="top-right" />
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 px-2.5 py-1 rounded-md border border-gold-200">
-                  Younger Brother
-                </span>
-                <User className="w-5 h-5 text-gold-500" />
-              </div>
-
-              <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                {members[2]?.name || "Badal Kumar Shaw"}
-              </h3>
-
-              <div className="text-xs font-semibold text-charcoal-700 mt-0.5">
-                {members[2]?.status || "Preparing for Banking"}
-              </div>
-
-              <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                {members[2]?.description || "Supportive younger brother, career-focused, well-educated, and actively preparing for banking examinations."}
-              </p>
-            </div>
-
-            <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-              <span>Location: Jasidih, Jharkhand</span>
-              <span className="text-charcoal-600 font-medium">Brother</span>
-            </div>
-          </div>
-
-          {/* 4. Younger Sister - Bishakha Shaw (Married) Card */}
+          {/* 3. Younger Sister - Bishakha Shaw (Married) */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
             <div>
@@ -161,25 +137,59 @@ export const FamilySection = ({ data }) => {
               </div>
 
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                {members[3]?.name || "Bishakha Shaw"}
+                {sisterBishakha.name || "Bishakha Shaw"}
               </h3>
 
-              <div className="text-xs font-semibold text-purple-700 mt-1 inline-flex items-center gap-1 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-200">
-                {members[3]?.status || "Married & Well-Settled"}
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-xs font-semibold text-purple-700">
+                  {sisterBishakha.status || "Married & Well-Settled"}
+                </span>
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                {members[3]?.description || "Married, cultured, and family-oriented younger sister, well-settled with family."}
+                {sisterBishakha.description || "Married, cultured, and family-oriented younger sister, happily married and well-settled with family."}
               </p>
             </div>
 
             <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-              <span>Status: Married</span>
+              <span>Location: {sisterBishakha.location || "Kolkata, India"}</span>
               <span className="text-purple-700 font-medium">Younger Sister</span>
             </div>
           </div>
 
-          {/* 5. Younger Brother - Shawan Shaw (Studying in Graduation) Card */}
+          {/* 4. Younger Brother - Badal Kumar Shaw (Unmarried) */}
+          <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
+            <CornerOrnament position="top-right" />
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-gold-700 bg-gold-50 px-2.5 py-1 rounded-md border border-gold-200">
+                  Younger Brother
+                </span>
+                <User className="w-5 h-5 text-gold-500" />
+              </div>
+
+              <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
+                {brotherBadal.name || "Badal Kumar Shaw"}
+              </h3>
+
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-xs font-semibold text-charcoal-700">
+                  {brotherBadal.status || "Preparing for Banking"}
+                </span>
+              </div>
+
+              <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
+                {brotherBadal.description || "Supportive, ambitious, and career-focused younger brother (unmarried), actively preparing for banking examinations."}
+              </p>
+            </div>
+
+            <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
+              <span>Location: {brotherBadal.location || "Jasidih, India"}</span>
+              <span className="text-charcoal-600 font-medium">Younger Brother</span>
+            </div>
+          </div>
+
+          {/* 5. Younger Brother - Shawan Shaw (Unmarried) */}
           <div className="bg-white rounded-3xl p-6 border border-warmborder shadow-card hover:shadow-md transition-shadow relative flex flex-col justify-between">
             <CornerOrnament position="top-right" />
             <div>
@@ -191,20 +201,22 @@ export const FamilySection = ({ data }) => {
               </div>
 
               <h3 className="font-serif text-xl font-bold text-charcoal-900 mt-3">
-                {members[4]?.name || "Shawan Shaw"}
+                {brotherShawan.name || "Shawan Shaw"}
               </h3>
 
-              <div className="text-xs font-semibold text-amber-800 mt-1 inline-flex items-center gap-1 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">
-                {members[4]?.status || "Studying in Graduation"}
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-xs font-semibold text-charcoal-700">
+                  {brotherShawan.status || "Studying in Graduation"}
+                </span>
               </div>
 
               <p className="text-xs text-charcoal-600 leading-relaxed mt-3 font-sans">
-                {members[4]?.description || "Supportive and ambitious younger brother, currently pursuing his graduation."}
+                {brotherShawan.description || "Supportive and ambitious younger brother (unmarried), currently pursuing his higher education / graduation."}
               </p>
             </div>
 
             <div className="mt-5 pt-3 border-t border-warmborder/80 flex items-center justify-between text-[11px] text-charcoal-500">
-              <span>Location: Jasidih, Jharkhand</span>
+              <span>Location: {brotherShawan.location || "Jasidih, India"}</span>
               <span className="text-amber-800 font-medium">Younger Brother</span>
             </div>
           </div>

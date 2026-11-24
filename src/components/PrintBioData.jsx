@@ -11,6 +11,12 @@ export const PrintBioData = ({ data }) => {
   const contact = data?.contact || {};
   const primaryPhoto = data?.photos?.[0] || {};
 
+  const father = f.members?.find(m => m.relation === "Father") || f.members?.[0] || {};
+  const mother = f.members?.find(m => m.relation === "Mother") || f.members?.[1] || {};
+  const brotherBadal = f.members?.find(m => m.name?.includes("Badal")) || {};
+  const sisterBishakha = f.members?.find(m => m.name?.includes("Bishakha") || m.relation?.includes("Sister")) || {};
+  const brotherShawan = f.members?.find(m => m.name?.includes("Shawan")) || {};
+
   return (
     <div
       id="pdf-download-wrapper"
@@ -231,8 +237,8 @@ export const PrintBioData = ({ data }) => {
               <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
                 <div>
                   <span className="font-bold text-gray-900">Father: </span>
-                  <span className="font-semibold text-gray-800">{f.members?.[0]?.name || "Bishwanath Shaw"}</span>
-                  <div className="text-xs text-gray-600">{f.members?.[0]?.status || "Businessman / Retired Professional"}</div>
+                  <span className="font-semibold text-gray-800">{father.name || "Bishwanath Shaw"}</span>
+                  <div className="text-xs text-gray-600">{father.status || "Businessman"}</div>
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Paternal</span>
               </div>
@@ -241,40 +247,40 @@ export const PrintBioData = ({ data }) => {
               <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
                 <div>
                   <span className="font-bold text-gray-900">Mother: </span>
-                  <span className="font-semibold text-gray-800">{f.members?.[1]?.name || "Smt. Shaw"}</span>
-                  <div className="text-xs text-gray-600">{f.members?.[1]?.status || "Homemaker"}</div>
+                  <span className="font-semibold text-gray-800">{mother.name || "Laxmi Devi"}</span>
+                  <div className="text-xs text-gray-600">{mother.status || "Homemaker"}</div>
                 </div>
                 <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Maternal</span>
               </div>
 
-              {/* Brother */}
-              <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
-                <div>
-                  <span className="font-bold text-gray-900">Younger Brother: </span>
-                  <span className="font-semibold text-gray-800">{f.members?.[2]?.name || "Badal Kumar Shaw"}</span>
-                  <div className="text-xs text-gray-600">{f.members?.[2]?.status || "Preparing for Banking"}</div>
-                </div>
-                <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Brother</span>
-              </div>
-
-              {/* Younger Sister */}
+              {/* Younger Sister - Bishakha */}
               <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
                 <div>
                   <span className="font-bold text-gray-900">Younger Sister: </span>
-                  <span className="font-semibold text-gray-800">{f.members?.[3]?.name || "Bishakha Shaw"}</span>
-                  <div className="text-xs text-gray-600">{f.members?.[3]?.status || "Married & Well-Settled"}</div>
+                  <span className="font-semibold text-gray-800">{sisterBishakha.name || "Bishakha Shaw"}</span>
+                  <div className="text-xs text-gray-600">{sisterBishakha.status || "Married & Well-Settled"} • Kolkata, India</div>
                 </div>
-                <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Sister</span>
+                <span className="text-[8.5pt] uppercase text-emerald-700 font-bold">Married</span>
+              </div>
+
+              {/* Younger Brother - Badal */}
+              <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
+                <div>
+                  <span className="font-bold text-gray-900">Younger Brother: </span>
+                  <span className="font-semibold text-gray-800">{brotherBadal.name || "Badal Kumar Shaw"}</span>
+                  <div className="text-xs text-gray-600">{brotherBadal.status || "Preparing for Banking"} • Jasidih, India</div>
+                </div>
+                <span className="text-[8.5pt] uppercase text-gray-600 font-bold">Unmarried</span>
               </div>
 
               {/* Younger Brother - Shawan */}
               <div className="p-2 rounded-lg border border-gray-200 flex justify-between items-start">
                 <div>
                   <span className="font-bold text-gray-900">Younger Brother: </span>
-                  <span className="font-semibold text-gray-800">{f.members?.[4]?.name || "Shawan Shaw"}</span>
-                  <div className="text-xs text-gray-600">{f.members?.[4]?.status || "Studying in Graduation"}</div>
+                  <span className="font-semibold text-gray-800">{brotherShawan.name || "Shawan Shaw"}</span>
+                  <div className="text-xs text-gray-600">{brotherShawan.status || "Studying in Graduation"} • Jasidih, India</div>
                 </div>
-                <span className="text-[8.5pt] uppercase text-gray-500 font-bold">Brother</span>
+                <span className="text-[8.5pt] uppercase text-gray-600 font-bold">Unmarried</span>
               </div>
             </div>
           </div>
