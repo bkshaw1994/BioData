@@ -134,7 +134,7 @@ export const PersonalInfo = ({ data }) => {
                 <Heart className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-xs text-charcoal-500 uppercase tracking-wider font-semibold block">Marital Status</span>
-                  <span className="text-sm font-semibold text-charcoal-800">{p.maritalStatus || "Never Married"}</span>
+                  <span className="text-sm font-semibold text-charcoal-800">{p.maritalStatus || "Unmarried"}</span>
                 </div>
               </div>
 

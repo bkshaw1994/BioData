@@ -15,7 +15,7 @@ export const initialBioData = {
     age: "32 Years",
     height: "6'0\" (183 cm)",
     complexion: "Wheatish",
-    maritalStatus: "Never Married",
+    maritalStatus: "Unmarried",
     bloodGroup: "O+",
     religion: "Hindu",
     casteCommunity: "Shaw",
